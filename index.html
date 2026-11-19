@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Diyetisyen Web Tasarım Koleksiyonu — 4 Farklı Pinterest Estetiği</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #F9F6F0;
+      --ink: #222520;
+      --muted: #666B62;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: var(--bg);
+      background-image:
+        radial-gradient(at 14% 18%, rgba(139, 174, 131, 0.35) 0px, transparent 48%),
+        radial-gradient(at 86% 22%, rgba(214, 87, 128, 0.25) 0px, transparent 50%),
+        radial-gradient(at 50% 70%, rgba(244, 211, 94, 0.3) 0px, transparent 52%),
+        radial-gradient(at 82% 85%, rgba(224, 109, 43, 0.22) 0px, transparent 48%);
+      background-attachment: fixed;
+      color: var(--ink);
+      padding: 3.5rem 4%;
+      min-height: 100vh;
+    }
+    .hub-container {
+      max-width: 1240px;
+      margin: 0 auto;
+    }
+    .hub-header {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 3.5rem;
+    }
+    .badge {
+      display: inline-block;
+      background: #E7EFE4;
+      color: #3B5438;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.4rem 1rem;
+      border-radius: 999px;
+      margin-bottom: 1rem;
+    }
+    h1 {
+      font-family: 'Instrument Serif', serif;
+      font-size: clamp(2.6rem, 4.8vw, 4rem);
+      font-weight: 400;
+      line-height: 1.05;
+      margin-bottom: 0.85rem;
+    }
+    h1 em {
+      font-style: italic;
+      color: #5D7E57;
+    }
+    .hub-header p {
+      color: var(--muted);
+      font-size: 1.02rem;
+      line-height: 1.6;
+    }
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.75rem;
+    }
+    .concept-card {
+      background: rgba(255, 255, 255, 0.68);
+      backdrop-filter: blur(22px) saturate(190%);
+      -webkit-backdrop-filter: blur(22px) saturate(190%);
+      border-radius: 28px;
+      overflow: hidden;
+      border: 1px solid rgba(255, 255, 255, 0.88);
+      box-shadow: inset 0 1px 1px #FFFFFF, 0 14px 36px rgba(0, 0, 0, 0.06);
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.28s ease, box-shadow 0.28s ease;
+      text-decoration: none;
+      color: inherit;
+    }
+    .concept-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 22px 48px rgba(0, 0, 0, 0.12);
+    }
+    .card-preview {
+      height: 220px;
+      position: relative;
+      overflow: hidden;
+    }
+    .card-preview img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.45s ease;
+    }
+    .concept-card:hover .card-preview img {
+      transform: scale(1.05);
+    }
+    .site-num {
+      position: absolute;
+      top: 14px;
+      left: 14px;
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(8px);
+      padding: 0.35rem 0.85rem;
+      border-radius: 999px;
+      font-size: 0.76rem;
+      font-weight: 700;
+    }
+    .palette-dots {
+      position: absolute;
+      bottom: 12px;
+      right: 14px;
+      display: flex;
+      gap: 6px;
+      background: rgba(255, 255, 255, 0.9);
+      padding: 6px 10px;
+      border-radius: 999px;
+    }
+    .dot {
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+      border: 1px solid rgba(0, 0, 0, 0.15);
+    }
+    .card-body {
+      padding: 1.65rem;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+    }
+    .folder-tag {
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 0.3rem;
+    }
+    .card-body h2 {
+      font-family: 'Instrument Serif', serif;
+      font-size: 1.9rem;
+      font-weight: 400;
+      margin-bottom: 0.45rem;
+    }
+    .card-body p {
+      font-size: 0.88rem;
+      color: var(--muted);
+      line-height: 1.55;
+      margin-bottom: 1.15rem;
+    }
+    .features-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      font-size: 0.82rem;
+      margin-bottom: 1.5rem;
+      flex: 1;
+    }
+    .open-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.85rem 1.3rem;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.88rem;
+      color: #FFFFFF;
+      text-align: center;
+    }
+    .btn-s1 { background: #3B5438; }
+    .btn-s2 { background: #681430; }
+    .btn-s3 { background: #384919; }
+    .btn-s4 { background: #E06D2B; }
+    @media (max-width: 640px) {
+      body {
+        padding: 2rem 4% 3rem;
+      }
+      .hub-header {
+        margin-bottom: 2rem;
+      }
+      .cards-grid {
+        grid-template-columns: 1fr;
+        gap: 1.25rem;
+      }
+      .card-preview {
+        height: 195px;
+      }
+      .card-body {
+        padding: 1.3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="hub-container">
+    <header class="hub-header">
+      <span class="badge">✨ 4 FARKLI PINTEREST &amp; GEN-Z DİYETİSYEN KONSEPTİ</span>
+      <h1>Dyt. Yaren Studio <em>Tasarım Koleksiyonu</em></h1>
+      <p>
+        Her biri kendi klasöründe (<code>site-1</code>, <code>site-2</code>, <code>site-3</code>, <code>site-4</code>) bağımsız olarak çalışan, farklı hedef kitlelere ve estetik dünyalara hitap eden 4 ayrı web sitesi.
+      </p>
+    </header>
+
+    <div class="cards-grid">
+      <!-- SITE 1 -->
+      <a href="site-1/index.html" class="concept-card">
+        <div class="card-preview">
+          <img src="https://images.unsplash.com/photo-1515823064-d6e0c04616a7?auto=format&fit=crop&w=800&q=80" alt="Site 1 Matcha & Soft Cream" />
+          <span class="site-num">🍵 1. SİTE (site-1/)</span>
+          <div class="palette-dots">
+            <span class="dot" style="background: #FAF6F0"></span>
+            <span class="dot" style="background: #5D7E57"></span>
+            <span class="dot" style="background: #D47A5B"></span>
+            <span class="dot" style="background: #F2D377"></span>
+          </div>
+        </div>
+        <div class="card-body">
+          <span class="folder-tag" style="color: #5D7E57">MATCHA &amp; SOFT CREAM • SCRAPBOOK</span>
+          <h2>Matcha &amp; Soul Nutrition</h2>
+          <p>Adaçayı yeşili, yulaf kremi ve polaroid kolajlarla sıcak, samimi Pinterest moodboard deneyimi.</p>
+          <ul class="features-list">
+            <li>📌 <strong>Gerçek Masonry Pano:</strong> Filtrelenebilir tarifler &amp; kişisel panoya kaydetme</li>
+            <li>😴 <strong>Anlık Mod Seçici:</strong> Moduna göre Dyt. Yaren’in anlık tavsiyesi</li>
+            <li>🧾 <strong>Daily Glow Receipt:</strong> Fiş tasarımlı su, makro ve kalori hesaplayıcı</li>
+          </ul>
+          <span class="open-btn btn-s1">1. Siteyi Aç (site-1) →</span>
+        </div>
+      </a>
+
+      <!-- SITE 2 -->
+      <a href="site-2/index.html" class="concept-card">
+        <div class="card-preview">
+          <img src="https://images.unsplash.com/photo-1490474418585-ba9bad8fd0ea?auto=format&fit=crop&w=800&q=80" alt="Site 2 Berry & Blush" />
+          <span class="site-num">🍒 2. SİTE (site-2/)</span>
+          <div class="palette-dots">
+            <span class="dot" style="background: #FFF9FB"></span>
+            <span class="dot" style="background: #FCEBF0"></span>
+            <span class="dot" style="background: #9B2449"></span>
+            <span class="dot" style="background: #681430"></span>
+          </div>
+        </div>
+        <div class="card-body">
+          <span class="folder-tag" style="color: #9B2449">BERRY &amp; BLUSH • PILATES &amp; CLEAN GIRL</span>
+          <h2>Blush &amp; Berry Club</h2>
+          <p>Toz pembe, vişne bordosu ve Bento-Grid düzeniyle pilates, cilt ışıltısı ve kadın hormon sağlığı kulübü.</p>
+          <ul class="features-list">
+            <li>🥣 <strong>Kendi Glow Bowl’unu Yarat:</strong> Baz, protein ve topping seçerek canlı kase tasarlama</li>
+            <li>🌸 <strong>Cycle Syncing Rehberi:</strong> 4 döngü fazına göre beslenme ve egzersiz eşleşmesi</li>
+            <li>🥤 <strong>Pembe Matara Sayacı:</strong> Bento hero içinde interaktif su bardakları</li>
+          </ul>
+          <span class="open-btn btn-s2">2. Siteyi Aç (site-2) →</span>
+        </div>
+      </a>
+
+      <!-- SITE 3 -->
+      <a href="site-3/index.html" class="concept-card">
+        <div class="card-preview">
+          <img src="https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=800&q=80" alt="Site 3 Sunlit Mediterranean" />
+          <span class="site-num">🍋 3. SİTE (site-3/)</span>
+          <div class="palette-dots">
+            <span class="dot" style="background: #FBF8F1"></span>
+            <span class="dot" style="background: #F4D35E"></span>
+            <span class="dot" style="background: #53682B"></span>
+            <span class="dot" style="background: #231C16"></span>
+          </div>
+        </div>
+        <div class="card-body">
+          <span class="folder-tag" style="color: #53682B">SUNLIT CITRUS &amp; MEDITERRANEAN EDITORIAL</span>
+          <h2>Casa Solis Atelier</h2>
+          <p>Keten beji, Amalfi limonu, zeytin yeşili ve kemerli fotoğraflarla Kinfolk dergisi tadında Akdeniz mutfak atölyesi.</p>
+          <ul class="features-list">
+            <li>🧺 <strong>Haftalık Menü &amp; Pazar Planlayıcı:</strong> Günlük öğün seçtikçe otomatik oluşan alışveriş listesi</li>
+            <li>🏛️ <strong>Kemerli Tarif İndeksi:</strong> Dergi mizanpajında numaralı zeytinyağlı &amp; brunch reçeteleri</li>
+            <li>⚖️ <strong>Longevity Hesaplayıcı:</strong> Günlük zeytinyağı ve bitkisel lif porsiyonu</li>
+          </ul>
+          <span class="open-btn btn-s3">3. Siteyi Aç (site-3) →</span>
+        </div>
+      </a>
+
+      <!-- SITE 4 -->
+      <a href="site-4/index.html" class="concept-card">
+        <div class="card-preview">
+          <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80" alt="Site 4 Kinetic Fuel Performance" />
+          <span class="site-num">⚡ 4. SİTE (site-4/)</span>
+          <div class="palette-dots">
+            <span class="dot" style="background: #151817"></span>
+            <span class="dot" style="background: #1B3B2B"></span>
+            <span class="dot" style="background: #E06D2B"></span>
+            <span class="dot" style="background: #F3F2EE"></span>
+          </div>
+        </div>
+        <div class="card-body">
+          <span class="folder-tag" style="color: #E06D2B">ATHLETIC LOFT • ERKEK &amp; UNISEX PERFORMANS</span>
+          <h2>Kinetic Fuel Studio</h2>
+          <p>Koyu obsidyen, orman yeşili, bakır turuncu ve endüstriyel loft estetiğiyle erkek/kadın sporcu ve yoğun çalışanlara özel.</p>
+          <ul class="features-list">
+            <li>🔥 <strong>Definasyon / Bulk / Recomp Motoru:</strong> Erkek &amp; kadın için bilimsel makro, su ve kreatin hesabı</li>
+            <li>🍔 <strong>40g+ Protein Mutfak Panosu:</strong> Fit Smash Burger, Döküm Tava Steak ve Burrito tarifleri</li>
+            <li>🍽️ <strong>Performans Tabağı Simülatörü:</strong> 3 adımda kas inşası öğünü oluşturma</li>
+          </ul>
+          <span class="open-btn btn-s4">4. Siteyi Aç (site-4) →</span>
+        </div>
+      </a>
+    </div>
+  </div>
+</body>
+</html>

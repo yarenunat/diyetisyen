@@ -1,0 +1,662 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KINETIC FUEL — Dyt. Yaren | Performans, Kas Gelişimi &amp; Modern Beslenme</title>
+  <meta name="description" content="Erkek ve kadın danışanlar için yüksek proteinli estetik tarifler, definasyon/bulk makro hesaplayıcı, sporcu beslenmesi ve sürdürülebilir performans koçluğu." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Ambient Blurmorphism Background Orbs -->
+  <div class="ambient-orbs" aria-hidden="true">
+    <div class="blur-orb orb-amber"></div>
+    <div class="blur-orb orb-forest"></div>
+    <div class="blur-orb orb-copper"></div>
+  </div>
+  <div class="cursor-blur-glow" id="cursorGlow" aria-hidden="true"></div>
+
+  <!-- Top Telemetry Bar -->
+  <div class="top-telemetry">
+    <div class="container telemetry-flex">
+      <span class="mono-tag">⚡ KINETIC NUTRITION LAB • PERFORMANS &amp; METABOLİK KOÇLUK</span>
+      <span class="mono-tag">DEFINASYON / CLEAN BULK / BODY RECOMP</span>
+      <a href="#coaching-form" class="telemetry-cta">ÜCRETSİZ VÜCUT &amp; HEDEF ANALİZİ →</a>
+    </div>
+  </div>
+
+  <!-- Navbar -->
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a href="#" class="brand">
+        <span class="brand-box">KF</span>
+        <div class="brand-info">
+          <strong>KINETIC FUEL</strong>
+          <span>DYT. YAREN PERFORMANCE STUDIO</span>
+        </div>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#macro-engine">Makro &amp; Cut/Bulk Motoru</a>
+        <a href="#tarif-panosu">40g+ Protein Panosu</a>
+        <a href="#plate-builder">Tabak Tasarla</a>
+        <a href="#results">Dönüşümler</a>
+        <a href="#programs">Koçluk</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="saved-btn" id="openSavedBtn" aria-label="Kaydedilen Tarifler">
+          <span>📌</span>
+          <span>Kayıtlı</span>
+          <span class="saved-count" id="savedCount">0</span>
+        </button>
+        <a href="#coaching-form" class="btn btn-amber btn-sm-hide">Koçluğa Başla ⚡</a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Menü">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+      <div class="container hero-grid">
+        <!-- Left: Strong Performance Copy & Day-Type Switcher -->
+        <div class="hero-left">
+          <div class="status-pill">
+            <span class="status-dot"></span> HAŞLANMIŞ TATSIZ TAVUK-PİLAV DÖNGÜSÜNE SON
+          </div>
+
+          <h1 class="hero-title">
+            Kas kütleni koru, yağ oranını düşür, <em>gerçek yemek</em> ye.
+          </h1>
+
+          <p class="hero-lead">
+            İster ağırlık antrenmanı yapıp definasyon (cut) veya hacim (clean bulk) hedefle, ister yoğun iş/okul temposunda göbek çevresi yağlarından kurtulup gün boyu keskin odaklanma iste. Bilimsel, yüksek proteinli ve sıfır sıkıcılıkta beslenme sistemi.
+          </p>
+
+          <!-- Interactive Day-Type Fuel Switcher -->
+          <div class="day-switcher-card">
+            <div class="switcher-top">
+              <span class="mono-label">⚙️ BUGÜNKÜ TEMPON NE? STRATEJİYİ SEÇ:</span>
+            </div>
+            <div class="day-tabs" role="tablist">
+              <button class="day-tab active" data-day="lift">🏋️‍♂️ Ağırlık / Hypertrophy</button>
+              <button class="day-tab" data-day="cardio">⚽ Maç / HIIT / Koşu</button>
+              <button class="day-tab" data-day="office">💻 Yoğun Ofis / Dinlenme</button>
+            </div>
+            <div class="day-strategy-box" id="dayStrategyBox">
+              <div class="strategy-badge" id="strategyBadge">ANTRENMAN GÜNÜ PROTOKOLÜ</div>
+              <p id="strategyText">
+                <strong>Pre-Workout (90 dk önce):</strong> Kompleks karbonhidrat + orta protein + Double Espresso. <br />
+                <strong>Post-Workout:</strong> 40-45g hızlı emilen protein + glikojen depolarını dolduran fırın patates/basmati pirinç.
+              </p>
+            </div>
+          </div>
+
+          <div class="hero-btns">
+            <a href="#macro-engine" class="btn btn-forest btn-lg">🔥 Definasyon &amp; Bulk Makronu Hesapla</a>
+            <a href="#tarif-panosu" class="btn btn-outline btn-lg">🥩 Yüksek Proteinli Tarif Panosu</a>
+          </div>
+
+          <div class="metrics-strip">
+            <div class="metric-item">
+              <strong>+850</strong>
+              <span>Erkek &amp; Kadın Sporcu / Profesyonel</span>
+            </div>
+            <div class="metric-item">
+              <strong>140g+</strong>
+              <span>Pratik Günlük Protein Çözümleri</span>
+            </div>
+            <div class="metric-item">
+              <strong>%100</strong>
+              <span>Sosyal Hayata &amp; Burger/Kahveye Uyumlu</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Industrial Loft / Athletic Pinterest Collage -->
+        <div class="hero-right">
+          <div class="loft-grid">
+            <!-- Card 1: Steak & Sweet Potato -->
+            <div class="visual-card card-tall">
+              <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=800&q=80" alt="Izgara Steak ve Fırın Patates" />
+              <div class="card-overlay">
+                <span class="mono-badge">54G PROTEİN • 610 KCAL</span>
+                <div class="card-caption">
+                  <strong>Döküm Tavada Steak &amp; Chimichurri Bowl</strong>
+                  <span>Akşam Antrenmanı Sonrası • 15 Dk Hazırlık</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2: High Protein Burger -->
+            <div class="visual-card card-short">
+              <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=80" alt="Fit Smash Burger" />
+              <div class="card-overlay">
+                <span class="mono-badge">FIT CHEAT MEAL • 46G PROTEİN</span>
+                <div class="card-caption">
+                  <strong>Ev Yapımı Fit Smash Burger</strong>
+                  <span>Suçluluksuz Cuma Akşamı</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3: Telemetry Dark Widget -->
+            <div class="telemetry-widget">
+              <div class="tw-head">
+                <span class="mono-label">📊 ÖRNEK BODY RECOMP HEDEFİ</span>
+                <span class="tw-pill">AKTİF</span>
+              </div>
+              <div class="tw-bars">
+                <div class="tw-row">
+                  <span>🥩 Protein (2.1g / kg)</span>
+                  <strong>165g</strong>
+                </div>
+                <div class="tw-bar"><div class="tw-fill fill-amber" style="width: 82%"></div></div>
+                <div class="tw-row">
+                  <span>🍚 Performans Karbonhidratı</span>
+                  <strong>230g</strong>
+                </div>
+                <div class="tw-bar"><div class="tw-fill fill-green" style="width: 68%"></div></div>
+              </div>
+              <p class="tw-foot">“Kas kaybetmeden yağ yakmanın sırrı aç kalmak değil, doğru makro zamanlamasıdır.” — Dyt. Yaren</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE CUT / BULK / RECOMP MACRO ENGINE -->
+    <section class="macro-section" id="macro-engine">
+      <div class="container">
+        <div class="macro-panel">
+          <div class="macro-inputs">
+            <span class="mono-label">⚡ BİLİMSEL MAKRO &amp; KALORİ MOTORU</span>
+            <h2 class="section-title">Definasyon, Recomp veya <em>Clean Bulk</em> Hesaplayıcı</h2>
+            <p class="section-sub">
+              Cinsiyetini, fiziksel ölçülerini ve antrenman hedefini gir; kas kütleni koruyup geliştirecek günlük kalori, makro, su ve kreatin protokolünü anında oluştur.
+            </p>
+
+            <div class="calc-grid">
+              <div class="input-box">
+                <label for="mGender">CİNSİYET</label>
+                <select id="mGender">
+                  <option value="male" selected>Erkek</option>
+                  <option value="female">Kadın</option>
+                </select>
+              </div>
+              <div class="input-box">
+                <label for="mAge">YAŞ</label>
+                <input type="number" id="mAge" value="26" min="15" max="75" />
+              </div>
+              <div class="input-box">
+                <label for="mHeight">BOY (CM)</label>
+                <input type="number" id="mHeight" value="180" min="140" max="220" />
+              </div>
+              <div class="input-box">
+                <label for="mWeight">KİLO (KG)</label>
+                <input type="number" id="mWeight" value="82" min="40" max="180" />
+              </div>
+              <div class="input-box">
+                <label for="mActivity">ANTRENMAN TEMPOSU</label>
+                <select id="mActivity">
+                  <option value="1.2">Masa başı iş / Sporsuz</option>
+                  <option value="1.375">Haftada 2-3 gün spor / yürüyüş</option>
+                  <option value="1.55" selected>Haftada 4-5 gün ağırlık / kondisyon</option>
+                  <option value="1.725">Haftada 6+ gün yoğun antrenman</option>
+                </select>
+              </div>
+              <div class="input-box">
+                <label for="mGoal">STRATEJİK HEDEF</label>
+                <select id="mGoal">
+                  <option value="cut" selected>🔥 Definasyon / Yağ Yakımı (Lean Cut)</option>
+                  <option value="recomp">⚡ Body Recomp (Yağ Yak &amp; Kas İnşa Et)</option>
+                  <option value="bulk">💪 Clean Bulk (Temiz Hacim &amp; Kuvvet)</option>
+                </select>
+              </div>
+            </div>
+
+            <button type="button" class="btn btn-amber btn-full" id="runMacroBtn" style="margin-top: 1.25rem;">
+              Performans Raporumu Hesapla ⚡
+            </button>
+          </div>
+
+          <!-- Dark Mode Telemetry Output Card -->
+          <div class="macro-dashboard">
+            <div class="dash-header">
+              <div>
+                <span class="mono-tag" style="color: #F39C4D;">KINETIC LAB • GÜNLÜK PROTOKOL</span>
+                <h3 id="dashGoalTitle">LEAN CUT / DEFİNASYON</h3>
+              </div>
+              <span class="dash-tdee" id="dashTdeeBadge">TDEE: 2.840 kcal</span>
+            </div>
+
+            <div class="dash-main-kcal">
+              <span>HEDEF GÜNLÜK ENERJİ</span>
+              <strong id="dashCalories">2.340 kcal</strong>
+            </div>
+
+            <div class="dash-macros-grid">
+              <div class="dash-macro-card">
+                <span class="mono-tag">PROTEİN</span>
+                <strong id="dashProtein">172g</strong>
+                <small id="dashProteinSub">2.1g / kg • Kas Koruma</small>
+              </div>
+              <div class="dash-macro-card">
+                <span class="mono-tag">KARBONHİDRAT</span>
+                <strong id="dashCarbs">235g</strong>
+                <small>Antrenman Odaklı</small>
+              </div>
+              <div class="dash-macro-card">
+                <span class="mono-tag">SAĞLIKLI YAĞ</span>
+                <strong id="dashFat">72g</strong>
+                <small>Hormon &amp; Testosteron/Östrojen</small>
+              </div>
+            </div>
+
+            <div class="dash-extras">
+              <div class="extra-pill">
+                <span>💧 Günlük Su:</span>
+                <strong id="dashWater">3.1 Litre</strong>
+              </div>
+              <div class="extra-pill">
+                <span>⚡ Kreatin Monohidrat:</span>
+                <strong id="dashCreatine">5g / Gün</strong>
+              </div>
+            </div>
+
+            <div class="dash-coach-note" id="dashCoachNote">
+              💡 <strong>Dyt. Yaren’in Koçluk Notu:</strong> Definasyon döneminde yağları çok düşürmek hormon seviyeni ve enerjini düşürür. 500 kcal’lik kontrollü açık ve yüksek proteinle kuvvet kaybetmeden haftada 0.6 - 0.8 kg saf yağ yakabilirsin.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PINTEREST ATHLETIC & URBAN KITCHEN MASONRY BOARD -->
+    <section class="board-section" id="tarif-panosu">
+      <div class="container">
+        <div class="board-header">
+          <div>
+            <span class="mono-label">📌 PINTEREST HIGH-PROTEIN KITCHEN BOARD</span>
+            <h2 class="section-title">Yüksek Proteinli &amp; Estetik <em>Mutfak Panosu</em></h2>
+            <p class="section-sub">
+              Sıkıcı diyet yemekleri yerine; döküm tava etler, fit burgerler, hızlı ofis/kampüs dürümleri ve 35g+ proteinli pratik kaseler.
+            </p>
+          </div>
+
+          <div class="board-search">
+            <input type="text" id="boardSearchInput" placeholder="🔍 Tarif veya makro ara (örn: burger, steak, 40g, yulaf)..." />
+          </div>
+        </div>
+
+        <div class="board-filters" id="boardFilters">
+          <button class="b-chip active" data-cat="all">⚡ Tümü</button>
+          <button class="b-chip" data-cat="main">🥩 40g+ Protein Ana Öğün</button>
+          <button class="b-chip" data-cat="cheat">🍔 Fit Burger &amp; Cheat Meal</button>
+          <button class="b-chip" data-cat="prepost">☕ Pre &amp; Post Workout</button>
+          <button class="b-chip" data-cat="prep">🥡 10 Dk Meal-Prep / Ofis</button>
+        </div>
+
+        <div class="kinetic-masonry" id="kineticMasonry">
+          <!-- Populated via JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE HIGH-PROTEIN PLATE BUILDER -->
+    <section class="plate-builder-section" id="plate-builder">
+      <div class="container">
+        <div class="section-head-center">
+          <span class="mono-label">🍽️ GÖRSEL ÖĞÜN &amp; TABAK SİMÜLATÖRÜ</span>
+          <h2 class="section-title">3 Adımda <em>Performans Tabağını</em> Tasarla</h2>
+          <p class="section-sub">
+            Protein, karbonhidrat ve yeşillik bölmelerini seç; tabağının gerçek görsel dizilimini ve canlı makro halkalarını anında incele.
+          </p>
+        </div>
+
+        <div class="plate-simulator">
+          <div class="plate-selectors">
+            <div class="p-step">
+              <div class="p-step-head">
+                <span class="p-step-badge">BÖLME 01 • %45</span>
+                <h3>Protein Bazını Seç</h3>
+              </div>
+              <div class="p-options" id="proteinOpts"></div>
+            </div>
+            <div class="p-step">
+              <div class="p-step-head">
+                <span class="p-step-badge">BÖLME 02 • %30</span>
+                <h3>Karbonhidrat Yakıtını Seç</h3>
+              </div>
+              <div class="p-options" id="carbOpts"></div>
+            </div>
+            <div class="p-step">
+              <div class="p-step-head">
+                <span class="p-step-badge">BÖLME 03 • %25</span>
+                <h3>Sağlıklı Yağ &amp; Yeşillik</h3>
+              </div>
+              <div class="p-options" id="sideOpts"></div>
+            </div>
+          </div>
+
+          <!-- Visual Blurmorphic Ceramic Plate Preview -->
+          <div class="plate-summary-card" id="plateSummaryCard">
+            <div class="plate-top-row">
+              <span class="mono-tag" style="color: #F59B4C;">⚡ 3D İNTERAKTİF TABAK SİMÜLATÖRÜ</span>
+              <button type="button" class="spin-plate-btn" id="randomPlateBtn" title="Rastgele Kombinasyon Çevir">
+                🎲 Tabağı Çevir
+              </button>
+            </div>
+
+            <!-- Interactive 3-Compartment Visual Ceramic Plate with SVG Macro Ring & Steam -->
+            <div class="ceramic-plate-stage" id="plateStage3D">
+              <div class="plate-ambient-halo"></div>
+
+              <!-- Animated SVG Macro Ring Wrapping the Plate -->
+              <svg class="plate-macro-svg" viewBox="0 0 360 360" aria-hidden="true">
+                <circle class="ring-bg" cx="180" cy="180" r="166" />
+                <circle class="ring-segment ring-fat" id="svgRingFat" cx="180" cy="180" r="166" />
+                <circle class="ring-segment ring-carb" id="svgRingCarb" cx="180" cy="180" r="166" />
+                <circle class="ring-segment ring-prot" id="svgRingProt" cx="180" cy="180" r="166" />
+              </svg>
+
+              <!-- Rising Warm Steam Animation -->
+              <div class="steam-container" aria-hidden="true">
+                <span class="steam-wisp w1"></span>
+                <span class="steam-wisp w2"></span>
+                <span class="steam-wisp w3"></span>
+              </div>
+
+              <div class="ceramic-plate-rim" id="ceramicPlateRim">
+                <div class="plate-specular-glare" id="plateGlare"></div>
+                <div class="plate-compartments">
+                  <!-- Left Half: Protein -->
+                  <div class="comp-slot comp-protein" id="slotProt">
+                    <img id="plateImgProt" src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=600&q=80" alt="Protein" />
+                  </div>
+                  <!-- Top Right: Carb -->
+                  <div class="comp-slot comp-carb" id="slotCarb">
+                    <img id="plateImgCarb" src="https://images.unsplash.com/photo-1639024471283-03518883512d?auto=format&fit=crop&w=500&q=80" alt="Karbonhidrat" />
+                  </div>
+                  <!-- Bottom Right: Side/Greens -->
+                  <div class="comp-slot comp-side" id="slotSide">
+                    <img id="plateImgSide" src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=500&q=80" alt="Yeşillik ve Sağlıklı Yağ" />
+                  </div>
+                </div>
+
+                <!-- Floating Unclipped Frosted Glass Badges Outside the Clipped Circle -->
+                <div class="comp-glass-tag tag-prot">
+                  <span id="labelNameProt">🥩 180g Bonfile</span>
+                  <strong id="compProtLabel">42g</strong>
+                </div>
+                <div class="comp-glass-tag tag-carb">
+                  <span id="labelNameCarb">🍠 Tatlı Patates</span>
+                  <strong id="compCarbLabel">41g</strong>
+                </div>
+                <div class="comp-glass-tag tag-side">
+                  <span id="labelNameSide">🥑 Avokado Roka</span>
+                  <strong id="compSideLabel">8g</strong>
+                </div>
+
+                <!-- Center Frosted Kcal Badge on the Plate -->
+                <div class="plate-center-hub" id="plateCenterHub">
+                  <strong id="plateKcal">550</strong>
+                  <span>KCAL</span>
+                </div>
+              </div>
+            </div>
+
+            <h3 id="plateName">Izgara Bonfile + Fırın Patates + Avokado Roka</h3>
+
+            <!-- Visual Macro Progress Bars inside Glass Boxes -->
+            <div class="plate-macro-meters">
+              <div class="pm-box">
+                <div class="pm-head">
+                  <span>PROTEİN</span>
+                  <strong id="plateProt">49g</strong>
+                </div>
+                <div class="pm-track"><div class="pm-bar bar-prot" id="barProt" style="width: 85%"></div></div>
+              </div>
+              <div class="pm-box">
+                <div class="pm-head">
+                  <span>KARBONHİDRAT</span>
+                  <strong id="plateCarb">46g</strong>
+                </div>
+                <div class="pm-track"><div class="pm-bar bar-carb" id="barCarb" style="width: 65%"></div></div>
+              </div>
+              <div class="pm-box">
+                <div class="pm-head">
+                  <span>SAĞLIKLI YAĞ</span>
+                  <strong id="plateFat">19g</strong>
+                </div>
+                <div class="pm-track"><div class="pm-bar bar-fat" id="barFat" style="width: 45%"></div></div>
+              </div>
+            </div>
+
+            <p class="plate-verdict" id="plateVerdict">
+              ✅ Antrenman sonrası kas protein sentezini (MPS) maksimuma çıkarmak için ideal lösin ve glikojen oranı!
+            </p>
+
+            <button type="button" class="btn btn-amber btn-full" id="saveCustomPlateBtn" style="margin-top: 1rem;">
+              📌 Bu Performans Tabağını Listeme Kaydet
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CLIENT TRANSFORMATIONS (MEN & WOMEN) -->
+    <section class="results-section" id="results">
+      <div class="container">
+        <div class="section-head-center">
+          <span class="mono-label">📈 GERÇEK PERFORMANS &amp; DÖNÜŞÜM KAYITLARI</span>
+          <h2 class="section-title">Sürdürülebilir Sistem, <em>Net Sonuçlar</em></h2>
+        </div>
+
+        <div class="results-grid">
+          <div class="res-card">
+            <div class="res-top">
+              <span class="res-tag">🔥 LEAN CUT • 10 HAFTA</span>
+              <strong>-9.4 kg Yağ / +1.8 kg Kas</strong>
+            </div>
+            <p>
+              “Yazılımcı olduğum için günde 10 saat bilgisayar başındayım ve akşamları yorgunluktan sürekli fast-food söylüyordum. Yaren’in verdiği 10 dakikalık airfryer tarifleri ve kahve-makro düzeniyle hiç aç kalmadan yağ oranımı %22’den %13’e çektim.”
+            </p>
+            <div class="res-author">
+              <strong>Burak T., 28</strong>
+              <span>Kıdemli Yazılım Mühendisi</span>
+            </div>
+          </div>
+
+          <div class="res-card res-card-dark">
+            <div class="res-top">
+              <span class="res-tag">💪 CLEAN BULK • 12 HAFTA</span>
+              <strong>+4.6 kg Temiz Kas Kütlesi</strong>
+            </div>
+            <p>
+              “Kilo almaya çalışırken hep göbeğim çıkıyordu. Antrenman günlerime göre karbonhidrat döngüsü (carb cycling) uyguladık; hem bench press ve squat rakamlarım arttı hem de karın hatlarım bozulmadan hacim kazandım.”
+            </p>
+            <div class="res-author">
+              <strong>Emre K., 23</strong>
+              <span>Makine Müh. Öğrencisi &amp; Amatör Basketbolcu</span>
+            </div>
+          </div>
+
+          <div class="res-card">
+            <div class="res-top">
+              <span class="res-tag">⚡ BODY RECOMP • 8 HAFTA</span>
+              <strong>-%5.2 Yağ Oranı &amp; Enerji</strong>
+            </div>
+            <p>
+              “Haftada 4 gün CrossFit yapıyorum ama yanlış beslendiğim için sürekli sakatlanma ve yorgunluk yaşıyordum. Antrenman öncesi/sonrası doğru yakıtlamayla performansım bambaşka bir seviyeye çıktı.”
+            </p>
+            <div class="res-author">
+              <strong>Mert &amp; Ceren A., 27</strong>
+              <span>Çift Paketi Danışanları</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COACHING PROGRAMS -->
+    <section class="programs-section" id="programs">
+      <div class="container">
+        <div class="section-head-center">
+          <span class="mono-label">🎯 ONLINE PERFORMANS &amp; BESLENME KOÇLUĞU</span>
+          <h2 class="section-title">Hedefine Uygun <em>Protokolü Seç</em></h2>
+        </div>
+
+        <div class="programs-grid">
+          <div class="prog-card">
+            <span class="mono-tag">4 HAFTALIK HIZLI SİSTEM</span>
+            <h3>Executive &amp; Campus Fuel</h3>
+            <p>Yoğun iş/sınav temposunda pratik meal-prep, dışarıda doğru menü seçimi ve yağ yakımı odaklı program.</p>
+            <div class="prog-price">₺2.700 <span>/ 4 Hafta</span></div>
+            <ul>
+              <li>✦ Kişiye özel kalori ve makro hedefli esnek liste</li>
+              <li>✦ Restoran, sipariş ve kahve zinciri rehberi</li>
+              <li>✦ Haftalık görüntülü/sesli durum analizi</li>
+              <li>✦ "10 Dakikada 40g Protein" Tarif Kitapçığı</li>
+            </ul>
+            <button class="btn btn-outline btn-full select-prog-btn" data-prog="Executive & Campus Fuel (4 Hafta)">
+              Bu Programı Seç →
+            </button>
+          </div>
+
+          <div class="prog-card prog-featured">
+            <div class="prog-ribbon">⚡ EN ÇOK TERCİH EDİLEN</div>
+            <span class="mono-tag">8 HAFTALIK TAM KOÇLUK</span>
+            <h3>Shred &amp; Build Pro (Cut / Recomp)</h3>
+            <p>Antrenman programınla %100 entegre, kas kütlesini koruyarak maksimum yağ yakımı veya temiz hacim kazanımı.</p>
+            <div class="prog-price">₺4.900 <span>/ 8 Hafta</span></div>
+            <ul>
+              <li>✦ Antrenman ve dinlenme günlerine özel Carb-Cycling planı</li>
+              <li>✦ Her hafta 1-1 görüntülü görüşme &amp; form/ölçüm takibi</li>
+              <li>✦ Kan tahliline göre kanıta dayalı supplement (kreatin, whey, omega-3) planlaması</li>
+              <li>✦ 7/24 WhatsApp üzerinden anlık öğün ve makro desteği</li>
+            </ul>
+            <button class="btn btn-amber btn-full select-prog-btn" data-prog="Shred & Build Pro (8 Hafta)">
+              Pro Koçluğa Başla ⚡
+            </button>
+          </div>
+
+          <div class="prog-card">
+            <span class="mono-tag">12 HAFTALIK ATLETİK DÖNÜŞÜM</span>
+            <h3>Athletic Peak &amp; Metabolic Reset</h3>
+            <p>İnatçı bölgesel yağlanma, insülin direnci veya yarışma/yaz hazırlığı için 3 aylık uçtan uca değişim.</p>
+            <div class="prog-price">₺6.800 <span>/ 12 Hafta</span></div>
+            <ul>
+              <li>✦ 3 fazlı (Adaptasyon → Yağ Yakımı → Koruma) periyodizasyon</li>
+              <li>✦ Sınırsız birebir iletişim ve haftalık menü revizyonu</li>
+              <li>✦ Ömür boyu kendi makronu yönetme mezuniyet kılavuzu</li>
+            </ul>
+            <button class="btn btn-outline btn-full select-prog-btn" data-prog="Athletic Peak (12 Hafta)">
+              Bu Programı Seç →
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COACHING APPLICATION FORM -->
+    <section class="coaching-section" id="coaching-form">
+      <div class="container">
+        <div class="coaching-box">
+          <div class="coaching-info">
+            <span class="mono-label">🚀 ÜCRETSİZ ÖN ANALİZ &amp; KAYIT</span>
+            <h2 class="section-title">Formunu Bir Üst <em>Seviyeye Taşı</em></h2>
+            <p>
+              Hedefin ister 10 kilo yağ yakmak, ister antrenman performansını ve kas kütleni artırmak olsun. Formu doldur; 24 saat içinde WhatsApp’tan iletişime geçip ücretsiz 15 dakikalık strateji görüşmemizi yapalım.
+            </p>
+            <div class="coach-badges">
+              <span>📸 Instagram: @kineticfuel.dyt</span>
+              <span>📌 Pinterest: @dytyarenperformance</span>
+            </div>
+          </div>
+
+          <form class="c-form" id="cForm">
+            <div class="c-field">
+              <label for="cName">AD SOYAD</label>
+              <input type="text" id="cName" required placeholder="Örn: Kaan Demir" />
+            </div>
+            <div class="c-row">
+              <div class="c-field">
+                <label for="cPhone">WHATSAPP NUMARASI</label>
+                <input type="tel" id="cPhone" required placeholder="05XX XXX XX XX" />
+              </div>
+              <div class="c-field">
+                <label for="cProg">PROGRAM SEÇİMİ</label>
+                <select id="cProg">
+                  <option value="Shred & Build Pro (8 Hafta)">Shred &amp; Build Pro (8 Hafta) ⚡</option>
+                  <option value="Executive & Campus Fuel (4 Hafta)">Executive &amp; Campus Fuel (4 Hafta)</option>
+                  <option value="Athletic Peak (12 Hafta)">Athletic Peak (12 Hafta)</option>
+                  <option value="Ücretsiz 15 Dk Strateji Görüşmesi">Ücretsiz 15 Dk Strateji Görüşmesi</option>
+                </select>
+              </div>
+            </div>
+            <div class="c-field">
+              <label for="cNote">MEVCUT DURUMUN &amp; HEDEFİN</label>
+              <textarea id="cNote" rows="3" placeholder="Örn: 182 boy, 86 kiloyum. Haftada 4 gün ağırlık antrenmanı yapıyorum, kas kaybetmeden yağ oranımı düşürmek istiyorum..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-amber btn-full btn-lg">
+              Strateji Görüşmesi Planla ⚡
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-row">
+      <div>
+        <strong>⚡ KINETIC FUEL STUDIO</strong>
+        <p>© 2026 Dyt. Yaren • Sporcu Beslenmesi, Metabolik Performans &amp; Estetik Mutfak</p>
+      </div>
+      <a href="../index.html" class="back-btn">← Tüm Tasarımlara Dön</a>
+    </div>
+  </footer>
+
+  <!-- RECIPE MODAL -->
+  <div class="k-modal-backdrop" id="kModal" aria-hidden="true">
+    <div class="k-modal-card">
+      <button class="k-close" id="kCloseBtn">✕</button>
+      <div id="kModalBody"></div>
+    </div>
+  </div>
+
+  <!-- SAVED RECIPES DRAWER -->
+  <div class="k-drawer-backdrop" id="kDrawerBackdrop" aria-hidden="true">
+    <aside class="k-drawer">
+      <div class="k-drawer-head">
+        <div>
+          <span class="mono-label">📌 KAYITLI PERFORMANS TARİFLERİ</span>
+          <h3>Favori Mutfak Listem</h3>
+        </div>
+        <button class="k-close" id="kCloseDrawerBtn">✕</button>
+      </div>
+      <div class="k-drawer-body" id="kDrawerList"></div>
+    </aside>
+  </div>
+
+  <!-- FLOATING SITE SWITCHER DOCK -->
+  <div class="floating-switcher" aria-label="Siteler arası hızlı geçiş">
+    <a href="../index.html" class="sw-item" title="Ana Vitrin">✨ Vitrin</a>
+    <a href="../site-1/index.html" class="sw-item" title="1. Site: Matcha & Soft Cream">🍵 1. Site</a>
+    <a href="../site-2/index.html" class="sw-item" title="2. Site: Blush & Berry">🍒 2. Site</a>
+    <a href="../site-3/index.html" class="sw-item" title="3. Site: Casa Solis Akdeniz">🍋 3. Site</a>
+    <a href="../site-4/index.html" class="sw-item active" title="4. Site: Kinetic Fuel (Unisex / Erkek & Sporcu)">⚡ 4. Site</a>
+  </div>
+
+  <div class="k-toast-wrap" id="kToastWrap"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

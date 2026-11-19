@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BLUSH &amp; BERRY CLUB — Dyt. Yaren | Pilates, Glow &amp; Hormon Beslenmesi</title>
+  <meta name="description" content="Clean girl estetiğinde, hormon döngüsüne uyumlu beslenme, pilates öncesi/sonrası tarifler ve kendi smoothie bowl'unu yaratma stüdyosu." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Ambient Blurmorphism Orbs -->
+  <div class="blush-ambient-orbs" aria-hidden="true">
+    <div class="b-orb b-orb-1"></div>
+    <div class="b-orb b-orb-2"></div>
+    <div class="b-orb b-orb-3"></div>
+  </div>
+
+  <!-- Top Ribbon -->
+  <div class="announcement-bar">
+    <span>🎀 21 Günlük "Pink Glow &amp; Sugar Reset" Kulüp Kayıtları Başladı</span>
+    <span class="sep">•</span>
+    <a href="#join">Kendi Yerinizi Ayırtın →</a>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container nav-bar">
+      <a href="#" class="logo">
+        <span class="logo-mark">🍒</span>
+        <div class="logo-text">
+          <strong>BLUSH &amp; BERRY</strong>
+          <span>by dyt. yaren studio</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="#bowl-studio">Bowl Stüdyosu</a>
+        <a href="#cycle-sync">Döngü Beslenmesi</a>
+        <a href="#aesthetic-feed">Pinterest Arşivi</a>
+        <a href="#glow-reviews">Kulüp Günlüğü</a>
+        <a href="#passes">Üyelikler</a>
+      </nav>
+
+      <div class="nav-cta">
+        <button class="fav-drawer-btn" id="openFavDrawerBtn" aria-label="Favori Tariflerim">
+          <span>🎀</span>
+          <span class="fav-label">Koleksiyonum</span>
+          <span class="fav-badge" id="favCountBadge">0</span>
+        </button>
+        <a href="#join" class="btn btn-cherry btn-sm-hide">Kulübe Katıl ✨</a>
+        <button class="burger-btn" id="burgerBtn" aria-label="Menü">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- BENTO GRID HERO SECTION -->
+    <section class="bento-hero">
+      <div class="container bento-grid">
+        <!-- Bento 1: Main Editorial Pitch -->
+        <div class="bento-card bento-main">
+          <div class="pill-tag">🎀 PILATES PRINCESS &amp; CLEAN GIRL NUTRITION</div>
+          <h1 class="hero-heading">
+            Işıltılı bir cilt, dengeli hormonlar ve <em>suçluluksuz</em> tatlılar.
+          </h1>
+          <p class="hero-sub">
+            Sabah pilatesinden sonra içtiğin berry smoothie’den, PMS dönemindeki çikolata krizine kadar; kadın bedeninin döngüsüyle uyumlu, estetik ve bilimsel beslenme kulübü.
+          </p>
+          <div class="hero-actions">
+            <a href="#bowl-studio" class="btn btn-cherry btn-lg">🍓 Kendi Glow Bowl’unu Yarat</a>
+            <a href="#cycle-sync" class="btn btn-blush btn-lg">🌸 Döngü Rehberini Keşfet</a>
+          </div>
+          <div class="mini-perks">
+            <span>✦ Kollajen &amp; Cilt Bariyeri</span>
+            <span>✦ Cycle Syncing (4 Faz)</span>
+            <span>✦ %100 Yasaksız Rutin</span>
+          </div>
+        </div>
+
+        <!-- Bento 2: Visual Mood Card -->
+        <div class="bento-card bento-visual">
+          <img src="https://images.unsplash.com/photo-1490474418585-ba9bad8fd0ea?auto=format&fit=crop&w=900&q=80" alt="Berry Smoothie Bowl Aesthetic" />
+          <div class="visual-overlay">
+            <span class="glass-badge">09:00 AM • Post-Pilates Fuel 🩰</span>
+            <div class="visual-bottom-caption">
+              <strong>Acai &amp; Cherry Glow Bowl</strong>
+              <span>24g Protein • Yüksek Antioksidan</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bento 3: Interactive Pink Tumbler Water Tracker -->
+        <div class="bento-card bento-hydration">
+          <div class="bento-card-head">
+            <span class="small-label">💧 PEMBE MATARA TAKİBİ</span>
+            <strong class="hydration-counter" id="waterCounterText">3 / 8 Bardak</strong>
+          </div>
+          <p class="hydration-sub">Bugün cildini içten nemlendirmek için içtiğin bardaklara tıkla:</p>
+          <div class="cups-grid" id="cupsGrid" aria-label="Su bardağı sayacı">
+            <!-- Populated via JS -->
+          </div>
+          <p class="hydration-status" id="waterStatusMsg">✨ Harika gidiyorsun! Öğlene kadar 2 bardak daha.</p>
+        </div>
+
+        <!-- Bento 4: Hot Girl Walk & Daily Affirmation -->
+        <div class="bento-card bento-manifesto">
+          <div class="manifesto-top">
+            <span class="small-label">🎧 GÜNLÜK RİTÜEL KARTI</span>
+            <span class="heart-icon">♥</span>
+          </div>
+          <blockquote class="manifesto-quote">
+            “Kendine iyi bakmak bir ceza değil, en sevdiğin sabah rutinin olmalı. 8.000 adım, bol su, renkli bir tabak ve sıfır stres.”
+          </blockquote>
+          <div class="manifesto-author">
+            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=200&q=80" alt="Dyt. Yaren" />
+            <div>
+              <strong>Dyt. Yaren Kaya</strong>
+              <span>Kadın Sağlığı &amp; Glow Beslenmesi</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TICKER RIBBON -->
+    <div class="blush-ticker" aria-hidden="true">
+      <div class="blush-ticker-track">
+        <span>🩰 PILATES &amp; PROTEIN</span>
+        <span>🍒 SKIN BARRIER NUTRITION</span>
+        <span>🌸 CYCLE SYNCING</span>
+        <span>🍓 ZERO GUILT SWEETS</span>
+        <span>🎀 HOT GIRL WALK FUEL</span>
+        <span>✨ GUT &amp; HORMONE GLOW</span>
+        <span>🩰 PILATES &amp; PROTEIN</span>
+        <span>🍒 SKIN BARRIER NUTRITION</span>
+        <span>🌸 CYCLE SYNCING</span>
+        <span>🍓 ZERO GUILT SWEETS</span>
+        <span>🎀 HOT GIRL WALK FUEL</span>
+        <span>✨ GUT &amp; HORMONE GLOW</span>
+      </div>
+    </div>
+
+    <!-- INTERACTIVE "BUILD YOUR GLOW BOWL" STUDIO -->
+    <section class="bowl-studio-section" id="bowl-studio">
+      <div class="container">
+        <div class="section-header-center">
+          <span class="pill-tag">🥣 İNTERAKTİF SMOOTHIE ATÖLYESİ</span>
+          <h2 class="section-heading">Kendi <em>Glow Bowl’unu</em> Tasarla</h2>
+          <p class="section-desc">
+            Malzemelerini seç; kasenin kalorisini, protein değerini, cilt ışıltısı puanını ve diyetisyen yorumunu anında gör, ardından kendi koleksiyonuna kaydet!
+          </p>
+        </div>
+
+        <div class="bowl-builder-grid">
+          <!-- Left: Ingredient Selectors -->
+          <div class="builder-controls">
+            <div class="builder-step">
+              <div class="step-title-row">
+                <span class="step-num">01</span>
+                <h3>Smoothie Bazını Seç (1 Adet)</h3>
+              </div>
+              <div class="options-grid" id="baseOptions"></div>
+            </div>
+
+            <div class="builder-step">
+              <div class="step-title-row">
+                <span class="step-num">02</span>
+                <h3>Protein &amp; Glow Boost (1 Adet)</h3>
+              </div>
+              <div class="options-grid" id="boostOptions"></div>
+            </div>
+
+            <div class="builder-step">
+              <div class="step-title-row">
+                <span class="step-num">03</span>
+                <h3>Çıtır Topping’lerini Seç (En fazla 3)</h3>
+              </div>
+              <div class="options-grid" id="toppingOptions"></div>
+            </div>
+          </div>
+
+          <!-- Right: Live Aesthetic 3D Animated Bowl Preview Card -->
+          <div class="bowl-preview-card">
+            <div class="bowl-card-top">
+              <span class="preview-badge">🎀 CANLI KASE SİMÜLATÖRÜ</span>
+              <button type="button" class="bowl-spin-btn" id="randomBowlBtn">🎲 Rastgele Kombinle</button>
+            </div>
+
+            <!-- Interactive Multi-Layer Ceramic Bowl -->
+            <div class="bowl-stage-3d" id="bowlStage3D">
+              <div class="bowl-pink-halo" id="bowlHalo"></div>
+
+              <!-- Animated SVG Glow Ring -->
+              <svg class="bowl-ring-svg" viewBox="0 0 320 320" aria-hidden="true">
+                <circle class="b-ring-bg" cx="160" cy="160" r="150" />
+                <circle class="b-ring-prog" id="bowlSvgRing" cx="160" cy="160" r="150" />
+              </svg>
+
+              <div class="bowl-visual-circle" id="bowlVisualCircle">
+                <!-- Dynamic Multi-Layer SVG Bowl Renderer (Base + Boost Swirl + Real Toppings) -->
+                <div class="bowl-canvas-layers" id="bowlCanvasLayers">
+                  <div class="bowl-layer-base" id="bowlLayerBase"></div>
+                  <div class="bowl-layer-boost" id="bowlLayerBoost"></div>
+                  <div class="bowl-layer-toppings" id="bowlLayerToppings"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Unclipped Active Ingredients Pills Below the Bowl -->
+            <div class="bowl-active-pills">
+              <span class="active-base-pill" id="bowlBasePill">🍒 Acai &amp; Vişne</span>
+              <span class="active-boost-pill" id="bowlBoostPill">✨ Vanilyalı Kolajen &amp; Whey</span>
+            </div>
+            <div class="bowl-toppings-strip" id="bowlToppingsEmojis"></div>
+
+            <h3 class="bowl-custom-title" id="bowlCustomTitle">Acai &amp; Vanilyalı Glow Bowl</h3>
+            <p class="bowl-ingredients-summary" id="bowlIngredientsSummary"></p>
+
+            <div class="bowl-nutrition-grid">
+              <div class="nutri-pill">
+                <span>Enerji</span>
+                <strong id="bowlKcal">315 kcal</strong>
+              </div>
+              <div class="nutri-pill">
+                <span>Protein</span>
+                <strong id="bowlProtein">24g</strong>
+              </div>
+              <div class="nutri-pill">
+                <span>Lif</span>
+                <strong id="bowlFiber">9g</strong>
+              </div>
+              <div class="nutri-pill nutri-glow">
+                <span>Glow Skoru</span>
+                <strong id="bowlGlowScore">98/100 ✨</strong>
+              </div>
+            </div>
+
+            <div class="bowl-dietitian-note" id="bowlDietitianNote">
+              🍒 <strong>Dyt. Yaren’in Yorumu:</strong> Pilates sonrası kas onarımı ve cilt kolajeni için mükemmel bir antioksidan dengesi!
+            </div>
+
+            <button class="btn btn-cherry btn-full" id="saveCustomBowlBtn">
+              🎀 Bu Kaseyi Koleksiyonuma Kaydet
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CYCLE SYNCING (DÖNGÜ SENKRONİZASYONU) INTERACTIVE GUIDE -->
+    <section class="cycle-section" id="cycle-sync">
+      <div class="container">
+        <div class="section-header-center">
+          <span class="pill-tag">🌸 CYCLE SYNCING • HORMON DOSTU BESLENME</span>
+          <h2 class="section-heading">Bedeninin <em>4 Mevsimiyle</em> Uyumlu Beslen</h2>
+          <p class="section-desc">
+            Her hafta enerjin, açlığın ve metabolizma hızın değişir. Kendini zorlamak yerine döngünün hangi fazında olduğunu seç ve tabağını ona göre ayarla.
+          </p>
+        </div>
+
+        <div class="cycle-tabs" id="cycleTabs" role="tablist">
+          <button class="cycle-tab active" data-phase="menstrual">🌸 1. Menstrüasyon (Gün 1-5)</button>
+          <button class="cycle-tab" data-phase="follicular">🌱 2. Foliküler Faz (Gün 6-13)</button>
+          <button class="cycle-tab" data-phase="ovulatory">☀️ 3. Ovulasyon (Gün 14-17)</button>
+          <button class="cycle-tab" data-phase="luteal">🍂 4. Luteal / PMS (Gün 18-28)</button>
+        </div>
+
+        <div class="cycle-panel" id="cyclePanel"></div>
+      </div>
+    </section>
+
+    <!-- AESTHETIC PINTEREST MASONRY LOOKBOOK & RECIPE ARCHIVE -->
+    <section class="feed-section" id="aesthetic-feed">
+      <div class="container">
+        <div class="feed-header">
+          <div>
+            <span class="pill-tag">📸 PINTEREST LOOKBOOK &amp; TARİFLER</span>
+            <h2 class="section-heading">Estetik <em>Tabak &amp; İçecek</em> Panosu</h2>
+            <p class="section-desc">Beğendiğin tarifleri <strong>🎀 Pinle</strong> butonuyla sağ üstteki koleksiyonuna ekle, üzerine tıklayarak malzemeleri incele.</p>
+          </div>
+          <div class="feed-search-wrap">
+            <input type="text" id="lookSearchInput" class="look-search-input" placeholder="🔍 Tarif veya malzeme ara (örn: kolajen, çilek, tost)..." />
+          </div>
+        </div>
+
+        <div class="feed-filters" id="feedFilters">
+          <button class="feed-chip active" data-cat="all">✨ Tümü</button>
+          <button class="feed-chip" data-cat="pilates">🩰 Pilates Öncesi/Sonrası</button>
+          <button class="feed-chip" data-cat="glow">🍒 Cilt &amp; Glow İçecekler</button>
+          <button class="feed-chip" data-cat="sweet">🍫 PMS &amp; Tatlı Krizine</button>
+          <button class="feed-chip" data-cat="lunch">🥗 Kampüs &amp; Ofis Kutusu</button>
+        </div>
+
+        <div class="lookbook-masonry" id="lookbookGrid">
+          <!-- Populated via JS -->
+        </div>
+      </div>
+    </section>
+
+    <!-- CLIENT GLOW DIARIES & POLAROIDS -->
+    <section class="reviews-section" id="glow-reviews">
+      <div class="container">
+        <div class="section-header-center">
+          <span class="pill-tag">💌 KULÜP GÜNLÜĞÜ &amp; DÖNÜŞÜMLER</span>
+          <h2 class="section-heading">Blush &amp; Berry <em>Kızları Ne Diyor?</em></h2>
+          <p class="section-desc">Kısıtlama olmadan, enerjisi yükselen ve aynadaki ışıltısını çok seven danışanlarımızın notları.</p>
+        </div>
+
+        <div class="reviews-grid">
+          <div class="review-card review-blush">
+            <span class="review-badge">🩰 Pilates &amp; Sıkılaşma</span>
+            <p class="review-quote">
+              “Haftada 3 gün reformer’a gidiyordum ama ne yiyeceğimi bilmediğim için hep şişkin hissediyordum. Yaren’in verdiği smoothie kaseleri ve akşam tabaklarıyla 5 haftada belim 6 cm inceldi!”
+            </p>
+            <div class="review-user">
+              <strong>Alya K., 22</strong>
+              <span>Mimarlık Öğrencisi • -4.8 kg Yağ Kaybı</span>
+            </div>
+          </div>
+
+          <div class="review-card review-white">
+            <span class="review-badge">🌸 PKOS &amp; Döngü Dengesi</span>
+            <p class="review-quote">
+              “PMS dönemimde bütün bir kavanoz çikolata kreması bitirip kendime kızardım. Luteal fazda karbonhidratımı doğru artırdığımızdan beri bir kere bile tatlı krizi yaşamadım 🍒”
+            </p>
+            <div class="review-user">
+              <strong>Derin M., 25</strong>
+              <span>Moda Editörü • Hormon &amp; İnsülin Dengesi</span>
+            </div>
+          </div>
+
+          <div class="review-card review-blush">
+            <span class="review-badge">✨ Skin Glow &amp; Ödem</span>
+            <p class="review-quote">
+              “21 günlük Sugar-Free Pink Reset’e katıldığımda tek amacım 2-3 kilo ödem atmaktı; ama herkes cildime hangi serumu sürdüğümü sormaya başladı! Bağırsak-cilt bağlantısı gerçekmiş.”
+            </p>
+            <div class="review-user">
+              <strong>Nil S., 24</strong>
+              <span>İçerik Üreticisi • 3 Haftada -3.5 kg</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STUDIO PASSES / PACKAGES -->
+    <section class="passes-section" id="passes">
+      <div class="container">
+        <div class="section-header-center">
+          <span class="pill-tag">🎟️ ONLINE KULÜP &amp; DANIŞMANLIK</span>
+          <h2 class="section-heading">Senin <em>Glow Pass</em> Üyeliğin</h2>
+          <p class="section-desc">
+            Standart diyet listelerinden sıkılanlar için; estetik tarif kitapları, sesli motivasyon mesajları ve birebir takipli programlar.
+          </p>
+        </div>
+
+        <div class="passes-grid">
+          <div class="pass-card">
+            <span class="pass-type">21 GÜNLÜK MİNİ PROGRAM</span>
+            <h3>Sugar-Free Pink Reset</h3>
+            <p>Tatlı bağımlılığını kırmak, yüz ve karın ödemini atmak ve enerji kazanmak isteyenlere hızlı başlangıç.</p>
+            <div class="pass-price">₺2.100 <span>/ 3 Hafta</span></div>
+            <ul>
+              <li>✦ 3 haftalık "Clean Girl" pratik menü planı</li>
+              <li>✦ 30+ tariflik Smoothie &amp; Sağlıklı Tatlı Rehberi</li>
+              <li>✦ Haftalık WhatsApp kontrol ve soru-cevap</li>
+            </ul>
+            <button class="btn btn-blush btn-full choose-pass-btn" data-pass="Sugar-Free Pink Reset (21 Gün)">
+              Paketi Seç →
+            </button>
+          </div>
+
+          <div class="pass-card pass-vip">
+            <div class="vip-tag">👑 EN POPÜLER ÜYELİK</div>
+            <span class="pass-type">4 HAFTALIK BİREBİR DANIŞMANLIK</span>
+            <h3>Pilates &amp; Berry VIP Club</h3>
+            <p>Antrenman günlerine, sosyal hayatına ve hormon döngüne %100 uyarlanmış birebir görüntülü takip.</p>
+            <div class="pass-price">₺3.400 <span>/ 4 Hafta</span></div>
+            <ul>
+              <li>✦ Her hafta 1-1 görüntülü görüşme &amp; vücut analizi</li>
+              <li>✦ Döngü fazlarına (Cycle Syncing) özel haftalık liste</li>
+              <li>✦ Günlük tabak fotoğrafı &amp; dışarıda menü seçimi desteği</li>
+              <li>✦ Kişiye özel takviye ve bitki çayı protokolü</li>
+            </ul>
+            <button class="btn btn-cherry btn-full choose-pass-btn" data-pass="Pilates & Berry VIP Club (4 Hafta)">
+              VIP Kontenjana Katıl ✨
+            </button>
+          </div>
+
+          <div class="pass-card">
+            <span class="pass-type">8 HAFTALIK HORMON &amp; CİLT</span>
+            <h3>Hormone &amp; Skin Glow</h3>
+            <p>PKOS, akne eğilimli cilt, kronik yorgunluk ve duygusal açlık yaşayanlar için bütüncül dönüşüm.</p>
+            <div class="pass-price">₺5.800 <span>/ 8 Hafta</span></div>
+            <ul>
+              <li>✦ 8 haftalık anti-inflamatuar ve düşük glisemik menü</li>
+              <li>✦ Kan tahlili odaklı eksiklik tamamlama planı</li>
+              <li>✦ Sınırsız WhatsApp sesli &amp; yazılı iletişim</li>
+            </ul>
+            <button class="btn btn-blush btn-full choose-pass-btn" data-pass="Hormone & Skin Glow (8 Hafta)">
+              Paketi Seç →
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- JOIN / BOOKING SECTION -->
+    <section class="join-section" id="join">
+      <div class="container">
+        <div class="join-box">
+          <div class="join-copy">
+            <span class="pill-tag">💌 TANIŞMA &amp; KAYIT</span>
+            <h2 class="section-heading">En Parlak Haline <em>Bugün</em> Merhaba De</h2>
+            <p>
+              Formu doldurduğunda asistanım veya ben 24 saat içinde seninle WhatsApp üzerinden iletişime geçerek ücretsiz 15 dakikalık tanışma görüşmemizi planlıyoruz.
+            </p>
+            <div class="insta-card">
+              <span>📸 Günlük tabak ilhamı için:</span>
+              <strong>@blushandberry.dyt</strong>
+            </div>
+          </div>
+
+          <form class="join-form" id="joinForm">
+            <div class="field">
+              <label for="jName">Adın Soyadın</label>
+              <input type="text" id="jName" required placeholder="Örn: Bade Soylu" />
+            </div>
+            <div class="field-row">
+              <div class="field">
+                <label for="jPhone">WhatsApp Numaran</label>
+                <input type="tel" id="jPhone" required placeholder="05XX XXX XX XX" />
+              </div>
+              <div class="field">
+                <label for="jPass">Seçtiğin Program</label>
+                <select id="jPass">
+                  <option value="Pilates & Berry VIP Club (4 Hafta)">Pilates &amp; Berry VIP Club ✨</option>
+                  <option value="Sugar-Free Pink Reset (21 Gün)">Sugar-Free Pink Reset 🍓</option>
+                  <option value="Hormone & Skin Glow (8 Hafta)">Hormone &amp; Skin Glow 🌸</option>
+                  <option value="Ücretsiz Ön Görüşme">Ücretsiz Ön Görüşme</option>
+                </select>
+              </div>
+            </div>
+            <div class="field">
+              <label for="jGoal">Hedefin veya Merak Ettiklerin</label>
+              <textarea id="jGoal" rows="3" placeholder="Örn: Haftada 3 gün reformer pilates yapıyorum, sıkılaşmak ve tatlı krizlerimi bitirmek istiyorum..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-cherry btn-full btn-lg">
+              Başvurumu Gönder 🎀
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-flex">
+      <div>
+        <strong>🍒 BLUSH &amp; BERRY CLUB</strong>
+        <p>Dyt. Yaren Studio • Kadın Sağlığı, Pilates &amp; Estetik Beslenme</p>
+      </div>
+      <div class="footer-right">
+        <a href="../index.html" class="switch-site-link">← Tüm Tasarımlara Dön</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- RECIPE MODAL -->
+  <div class="modal-overlay" id="recipeModal" aria-hidden="true">
+    <div class="modal-window">
+      <button class="close-btn" id="closeModal" aria-label="Kapat">✕</button>
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <!-- FAVORITES DRAWER -->
+  <div class="fav-drawer-backdrop" id="favDrawerBackdrop" aria-hidden="true">
+    <aside class="fav-drawer">
+      <div class="fav-drawer-head">
+        <div>
+          <span class="small-label">🎀 KİŞİSEL PANO</span>
+          <h3>Favori Tarif &amp; Kase Koleksiyonum</h3>
+        </div>
+        <button class="close-btn" id="closeFavDrawerBtn" aria-label="Kapat">✕</button>
+      </div>
+      <div class="fav-drawer-body" id="favDrawerList"></div>
+    </aside>
+  </div>
+
+  <!-- FLOATING SITE SWITCHER DOCK -->
+  <div class="floating-switcher" aria-label="Siteler arası hızlı geçiş">
+    <a href="../index.html" class="sw-item" title="Ana Vitrin">✨ Vitrin</a>
+    <a href="../site-1/index.html" class="sw-item" title="1. Site: Matcha & Soft Cream">🍵 1. Site</a>
+    <a href="../site-2/index.html" class="sw-item active" title="2. Site: Blush & Berry">🍒 2. Site</a>
+    <a href="../site-3/index.html" class="sw-item" title="3. Site: Casa Solis Akdeniz">🍋 3. Site</a>
+    <a href="../site-4/index.html" class="sw-item" title="4. Site: Kinetic Fuel (Erkek & Sporcu)">⚡ 4. Site</a>
+  </div>
+
+  <!-- TOAST -->
+  <div class="toast-wrap" id="toastWrap"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

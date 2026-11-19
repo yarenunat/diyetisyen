@@ -1,0 +1,1188 @@
+/* ==========================================================================
+   SITE 3: CASA SOLIS — SUNLIT CITRUS & MEDITERRANEAN EDITORIAL DESIGN
+   ========================================================================== */
+
+:root {
+  --linen: #FBF8F1;
+  --sand: #F2EBDC;
+  --citrus: #F4D35E;
+  --citrus-soft: #FDF5D7;
+  --olive-deep: #384919;
+  --olive-main: #53682B;
+  --olive-tint: #E9EFE0;
+  --terracotta: #C65D3B;
+
+  --espresso: #231C16;
+  --umber: #594D42;
+  --stone: #877A6E;
+
+  --line-fine: rgba(35, 28, 22, 0.14);
+  --line-bold: rgba(35, 28, 22, 0.28);
+
+  --font-serif: 'Fraunces', Georgia, serif;
+  --font-sans: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: 'Space Mono', monospace;
+
+  --radius-sm: 12px;
+  --radius-md: 20px;
+  --radius-arch: 220px 220px 20px 20px;
+  --radius-pill: 999px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--linen);
+  background-image:
+    radial-gradient(at 15% 18%, rgba(244, 211, 94, 0.35) 0px, transparent 50%),
+    radial-gradient(at 85% 24%, rgba(83, 104, 43, 0.18) 0px, transparent 52%),
+    radial-gradient(at 50% 72%, rgba(198, 93, 59, 0.15) 0px, transparent 55%);
+  background-attachment: fixed;
+  color: var(--espresso);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+}
+
+.container {
+  width: min(1240px, 92%);
+  margin-inline: auto;
+}
+
+.mono-text,
+.mono-label,
+.mono-num,
+.mono-link {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.mono-label {
+  display: inline-block;
+  color: var(--olive-main);
+  font-weight: 700;
+  margin-bottom: 0.65rem;
+}
+
+/* Masthead & Editorial Header */
+.masthead-strip {
+  background: var(--espresso);
+  color: var(--linen);
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--line-fine);
+}
+
+.masthead-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.mono-link {
+  color: var(--citrus);
+  font-weight: 700;
+}
+
+.editorial-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(251, 248, 241, 0.92);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--line-bold);
+  padding: 1rem 0;
+}
+
+.header-grid {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+}
+
+.nav-left,
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1.65rem;
+  font-size: 0.92rem;
+  font-weight: 500;
+}
+
+.nav-right {
+  justify-content: flex-end;
+}
+
+.editorial-brand {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.brand-main {
+  font-family: var(--font-serif);
+  font-size: 1.85rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.brand-sub {
+  font-family: var(--font-mono);
+  font-size: 0.64rem;
+  letter-spacing: 0.16em;
+  color: var(--umber);
+  margin-top: 3px;
+}
+
+/* Buttons */
+.btn-editorial {
+  background: var(--citrus);
+  color: var(--espresso);
+  font-weight: 600;
+  padding: 0.5rem 1.15rem;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--espresso);
+  font-size: 0.86rem;
+  transition: transform 0.2s ease;
+}
+
+.btn-editorial:hover {
+  transform: translateY(-2px);
+}
+
+.btn-olive {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--olive-deep);
+  color: var(--linen);
+  font-weight: 600;
+  padding: 0.88rem 1.65rem;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--olive-deep);
+  cursor: pointer;
+  transition: all 0.22s ease;
+}
+
+.btn-olive:hover {
+  background: var(--olive-main);
+  transform: translateY(-2px);
+}
+
+.btn-linen {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--sand);
+  color: var(--espresso);
+  font-weight: 600;
+  padding: 0.88rem 1.55rem;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--line-bold);
+  cursor: pointer;
+  transition: all 0.22s ease;
+}
+
+.btn-linen:hover {
+  background: var(--citrus-soft);
+}
+
+.btn-full {
+  width: 100%;
+}
+
+.section-heading {
+  font-family: var(--font-serif);
+  font-size: clamp(2.25rem, 4.2vw, 3.35rem);
+  font-weight: 400;
+  line-height: 1.08;
+  margin-bottom: 0.65rem;
+}
+
+.section-heading em {
+  font-style: italic;
+  color: var(--olive-main);
+}
+
+.section-sub {
+  color: var(--umber);
+  max-width: 600px;
+}
+
+/* ==========================================================================
+   EDITORIAL SPREAD HERO
+   ========================================================================== */
+.editorial-hero {
+  padding: 3.5rem 0 4.5rem;
+  border-bottom: 1px solid var(--line-bold);
+}
+
+.hero-spread {
+  display: grid;
+  grid-template-columns: 1.15fr 0.95fr 0.75fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.issue-badge {
+  display: inline-block;
+  background: var(--citrus-soft);
+  border: 1px solid var(--espresso);
+  padding: 0.3rem 0.85rem;
+  border-radius: var(--radius-pill);
+  margin-bottom: 1.2rem;
+}
+
+.editorial-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2.7rem, 4.6vw, 4rem);
+  font-weight: 400;
+  line-height: 1.04;
+  margin-bottom: 1.2rem;
+}
+
+.editorial-title em {
+  font-style: italic;
+  color: var(--olive-main);
+}
+
+.editorial-lead {
+  color: var(--umber);
+  font-size: 1.05rem;
+  margin-bottom: 1.75rem;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+  margin-bottom: 2rem;
+}
+
+.ritual-box {
+  background: var(--sand);
+  border-left: 3px solid var(--olive-deep);
+  padding: 1.1rem 1.25rem;
+  border-radius: 0 16px 16px 0;
+}
+
+.ritual-box p {
+  font-size: 0.9rem;
+  color: var(--espresso);
+  font-style: italic;
+}
+
+/* Arched Centerpiece */
+.arch-frame {
+  background: #FFFFFF;
+  padding: 0.85rem 0.85rem 1.1rem;
+  border: 1px solid var(--line-bold);
+  border-radius: var(--radius-arch);
+}
+
+.arch-frame img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 210px 210px 12px 12px;
+  margin-bottom: 0.75rem;
+}
+
+.arch-caption {
+  text-align: center;
+  color: var(--umber);
+}
+
+/* Right Column Editorial Notes */
+.spread-right {
+  display: flex;
+  flex-direction: column;
+  gap: 1.15rem;
+}
+
+.editorial-note-card {
+  background: #FFFFFF;
+  border: 1px solid var(--line-bold);
+  padding: 1.35rem;
+  border-radius: var(--radius-md);
+}
+
+.card-citrus {
+  background: var(--citrus-soft);
+}
+
+.editorial-note-card h3 {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  margin: 0.3rem 0 0.45rem;
+}
+
+.editorial-note-card p {
+  font-size: 0.88rem;
+  color: var(--umber);
+}
+
+.small-polaroid {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  background: var(--olive-tint);
+  border: 1px solid var(--line-bold);
+  padding: 0.85rem 1.1rem;
+  border-radius: var(--radius-md);
+}
+
+.small-polaroid img {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1.5px solid var(--olive-deep);
+}
+
+.small-polaroid div {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ==========================================================================
+   INTERACTIVE WEEKLY MEAL & MARKET LIST PLANNER
+   ========================================================================== */
+.planner-section {
+  padding: 5rem 0;
+  border-bottom: 1px solid var(--line-bold);
+}
+
+.editorial-section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 2.2rem;
+}
+
+.preset-buttons {
+  display: flex;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.preset-btn {
+  background: #FFFFFF;
+  border: 1px solid var(--line-bold);
+  padding: 0.6rem 1.15rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.86rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.preset-btn.active {
+  background: var(--citrus);
+  border-color: var(--espresso);
+}
+
+.planner-layout {
+  display: grid;
+  grid-template-columns: 1.35fr 0.85fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.days-board {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.day-row-card {
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(20px) saturate(185%);
+  -webkit-backdrop-filter: blur(20px) saturate(185%);
+  border: 1px solid var(--line-bold);
+  border-radius: var(--radius-md);
+  padding: 1.2rem 1.4rem;
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 1.25rem;
+  align-items: center;
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.9);
+}
+
+.day-badge {
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid var(--line-fine);
+  padding-right: 0.75rem;
+}
+
+.day-badge strong {
+  font-family: var(--font-serif);
+  font-size: 1.3rem;
+}
+
+.day-meals-selects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+}
+
+.meal-slot label {
+  display: block;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--stone);
+  margin-bottom: 0.25rem;
+}
+
+.meal-slot select {
+  width: 100%;
+  background: var(--linen);
+  border: 1px solid var(--line-bold);
+  padding: 0.5rem 0.65rem;
+  border-radius: 10px;
+  font-size: 0.82rem;
+  color: var(--espresso);
+  outline: none;
+}
+
+/* Market Basket Sidebar */
+.market-basket-card {
+  background: var(--citrus-soft);
+  border: 1.5px solid var(--espresso);
+  border-radius: 24px;
+  padding: 1.85rem;
+  position: sticky;
+  top: 88px;
+}
+
+.basket-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-bottom: 1px dashed var(--line-bold);
+  padding-bottom: 0.9rem;
+  margin-bottom: 0.9rem;
+}
+
+.basket-header h3 {
+  font-family: var(--font-serif);
+  font-size: 1.7rem;
+}
+
+.item-count-badge {
+  background: var(--espresso);
+  color: var(--citrus);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-pill);
+}
+
+.basket-hint {
+  font-size: 0.85rem;
+  color: var(--umber);
+  margin-bottom: 1.15rem;
+}
+
+.basket-categories {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-height: 360px;
+  overflow-y: auto;
+  margin-bottom: 1.25rem;
+  padding-right: 0.25rem;
+}
+
+.basket-group h4 {
+  font-family: var(--font-mono);
+  font-size: 0.74rem;
+  color: var(--olive-deep);
+  margin-bottom: 0.45rem;
+}
+
+.basket-items {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.4rem;
+}
+
+.basket-items label {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.84rem;
+  background: rgba(255, 255, 255, 0.75);
+  padding: 0.4rem 0.65rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.basket-items input:checked + span {
+  text-decoration: line-through;
+  color: var(--stone);
+}
+
+/* ==========================================================================
+   ARCHED RECIPE INDEX
+   ========================================================================== */
+.recipe-index-section {
+  padding: 5rem 0;
+  border-bottom: 1px solid var(--line-bold);
+}
+
+.index-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.index-filters {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.idx-filter {
+  background: transparent;
+  border: 1px solid var(--line-bold);
+  padding: 0.5rem 1.1rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.idx-filter.active {
+  background: var(--espresso);
+  color: var(--linen);
+}
+
+.arch-recipe-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+
+.arch-card {
+  background: #FFFFFF;
+  border: 1px solid var(--line-bold);
+  border-radius: 160px 160px 20px 20px;
+  padding: 0.85rem 0.85rem 1.5rem;
+  cursor: pointer;
+  transition: transform 0.28s ease;
+}
+
+.arch-card:hover {
+  transform: translateY(-6px);
+}
+
+.arch-img-wrap {
+  border-radius: 150px 150px 12px 12px;
+  overflow: hidden;
+  aspect-ratio: 4 / 4.2;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+.arch-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.arch-num-tag {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: var(--linen);
+  border: 1px solid var(--espresso);
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-pill);
+}
+
+.arch-body {
+  padding-inline: 0.5rem;
+}
+
+.arch-body h3 {
+  font-family: var(--font-serif);
+  font-size: 1.45rem;
+  margin: 0.25rem 0 0.4rem;
+}
+
+.arch-body p {
+  font-size: 0.88rem;
+  color: var(--umber);
+  margin-bottom: 0.85rem;
+}
+
+.arch-meta {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--olive-deep);
+  border-top: 1px solid var(--line-fine);
+  padding-top: 0.65rem;
+}
+
+/* ==========================================================================
+   LONGEVITY CALCULATOR SECTION
+   ========================================================================== */
+.longevity-section {
+  padding: 4.5rem 0;
+  border-bottom: 1px solid var(--line-bold);
+  background: var(--sand);
+}
+
+.longevity-box {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+.l-form-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.85rem;
+}
+
+.longevity-card-col {
+  background: var(--linen);
+  border: 1.5px solid var(--espresso);
+  border-radius: 24px;
+  padding: 2rem;
+}
+
+.l-stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.85rem;
+  margin: 1rem 0 1.25rem;
+}
+
+.l-stat {
+  background: #FFFFFF;
+  border: 1px solid var(--line-bold);
+  padding: 0.9rem 1rem;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+}
+
+.l-stat strong {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  color: var(--olive-deep);
+}
+
+.l-advice {
+  font-size: 0.88rem;
+  color: var(--umber);
+  font-style: italic;
+  background: var(--citrus-soft);
+  padding: 0.9rem 1.1rem;
+  border-radius: 12px;
+  border-left: 3px solid var(--olive-deep);
+}
+
+/* Floating Site Switcher */
+.floating-switcher {
+  position: fixed;
+  bottom: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 950;
+  background: rgba(35, 28, 22, 0.94);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  padding: 0.32rem;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  max-width: calc(100vw - 20px);
+  overflow-x: auto;
+  scrollbar-width: none;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.22);
+}
+
+.floating-switcher::-webkit-scrollbar {
+  display: none;
+}
+
+.sw-item {
+  color: var(--linen);
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 0.42rem 0.85rem;
+  border-radius: 999px;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.sw-item:hover {
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.sw-item.active {
+  background: var(--citrus);
+  color: var(--espresso);
+}
+
+.ed-mobile-btn {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid var(--espresso);
+  background: #FFFFFF;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.ed-mobile-btn span {
+  width: 16px;
+  height: 2px;
+  background: var(--espresso);
+}
+
+.ed-mobile-nav {
+  display: none;
+  flex-direction: column;
+  gap: 0.85rem;
+  padding: 1.1rem 4%;
+  background: rgba(251, 248, 241, 0.98);
+  border-top: 1px solid var(--line-bold);
+  margin-top: 0.75rem;
+  font-weight: 600;
+}
+
+.ed-mobile-nav.open {
+  display: flex;
+}
+
+/* ==========================================================================
+   PILLARS & PROGRAMS
+   ========================================================================== */
+.pillars-section {
+  padding: 4.5rem 0;
+  background: var(--olive-tint);
+  border-bottom: 1px solid var(--line-bold);
+}
+
+.pillars-grid {
+  display: grid;
+  grid-template-columns: 1.2fr repeat(3, 1fr);
+  gap: 2rem;
+  align-items: start;
+}
+
+.pillar-item {
+  background: var(--linen);
+  border: 1px solid var(--line-bold);
+  padding: 1.5rem;
+  border-radius: var(--radius-md);
+}
+
+.pillar-item h3 {
+  font-family: var(--font-serif);
+  font-size: 1.35rem;
+  margin: 0.4rem 0 0.5rem;
+}
+
+.pillar-item p {
+  font-size: 0.88rem;
+  color: var(--umber);
+}
+
+.programs-section {
+  padding: 5rem 0;
+}
+
+.editorial-packages {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.ed-pkg-card {
+  background: #FFFFFF;
+  border: 1px solid var(--line-bold);
+  border-radius: 24px;
+  padding: 2.2rem 1.8rem;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.ed-pkg-featured {
+  background: var(--citrus-soft);
+  border: 2px solid var(--espresso);
+}
+
+.ed-badge {
+  position: absolute;
+  top: -12px;
+  right: 20px;
+  background: var(--espresso);
+  color: var(--citrus);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-pill);
+}
+
+.ed-pkg-card h3 {
+  font-family: var(--font-serif);
+  font-size: 1.85rem;
+  margin: 0.4rem 0 0.5rem;
+}
+
+.ed-pkg-card p {
+  font-size: 0.88rem;
+  color: var(--umber);
+  margin-bottom: 1.2rem;
+}
+
+.ed-price {
+  font-family: var(--font-serif);
+  font-size: 2.4rem;
+  margin-bottom: 1.2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--line-fine);
+}
+
+.ed-price span {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: var(--stone);
+}
+
+.ed-pkg-card ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  font-size: 0.88rem;
+  color: var(--umber);
+  margin-bottom: 1.75rem;
+  flex: 1;
+}
+
+/* Booking */
+.atelier-booking {
+  padding: 3rem 0 5.5rem;
+}
+
+.reservation-card {
+  background: var(--sand);
+  border: 1.5px solid var(--espresso);
+  border-radius: 28px;
+  padding: 3rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+.atelier-meta {
+  display: flex;
+  gap: 2rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.atelier-meta div {
+  display: flex;
+  flex-direction: column;
+}
+
+.res-form {
+  background: var(--linen);
+  border: 1px solid var(--line-bold);
+  padding: 2rem;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.f-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.f-group label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.f-group input,
+.f-group select,
+.f-group textarea {
+  background: #FFFFFF;
+  border: 1px solid var(--line-bold);
+  padding: 0.75rem 0.9rem;
+  border-radius: 10px;
+  font-size: 0.9rem;
+}
+
+.f-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.85rem;
+}
+
+/* Footer */
+.ed-footer {
+  padding: 2rem 0;
+  border-top: 1px solid var(--line-bold);
+  background: var(--sand);
+}
+
+.ed-footer-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.back-hub-btn {
+  background: var(--espresso);
+  color: var(--citrus);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 0.5rem 1.1rem;
+  border-radius: var(--radius-pill);
+}
+
+/* Modal & Toast */
+.ed-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(35, 28, 22, 0.55);
+  backdrop-filter: blur(5px);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+  z-index: 1000;
+}
+
+.ed-modal-backdrop.open {
+  display: flex;
+}
+
+.ed-modal-box {
+  background: var(--linen);
+  border: 1.5px solid var(--espresso);
+  border-radius: 24px;
+  padding: 2.2rem;
+  width: min(680px, 100%);
+  position: relative;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.ed-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--espresso);
+  background: #FFFFFF;
+  cursor: pointer;
+}
+
+.ed-toast-wrap {
+  position: fixed;
+  bottom: 70px;
+  right: 16px;
+  left: 16px;
+  pointer-events: none;
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.5rem;
+}
+
+.ed-toast {
+  background: var(--espresso);
+  color: var(--citrus);
+  padding: 0.75rem 1.15rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.84rem;
+  font-weight: 600;
+  max-width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .hero-spread,
+  .planner-layout,
+  .longevity-box,
+  .pillars-grid,
+  .reservation-card {
+    grid-template-columns: 1fr;
+  }
+
+  .market-basket-card {
+    position: static;
+  }
+
+  .arch-recipe-grid,
+  .editorial-packages {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .masthead-inner span:nth-child(2) {
+    display: none;
+  }
+
+  .masthead-inner {
+    justify-content: center;
+    text-align: center;
+  }
+
+  .nav-left,
+  .hide-mobile-link {
+    display: none;
+  }
+
+  .ed-mobile-btn {
+    display: inline-flex;
+  }
+
+  .header-grid {
+    grid-template-columns: 1fr auto;
+  }
+
+  .editorial-brand {
+    text-align: left;
+  }
+
+  .brand-sub {
+    display: none;
+  }
+
+  .nav-right {
+    gap: 0.55rem;
+  }
+
+  .editorial-hero,
+  .planner-section,
+  .recipe-index-section,
+  .longevity-section,
+  .pillars-section,
+  .programs-section,
+  .atelier-booking {
+    padding: 3rem 0;
+  }
+
+  .hero-buttons a {
+    width: 100%;
+    text-align: center;
+  }
+
+  .day-badge {
+    border-right: none;
+    border-bottom: 1px solid var(--line-fine);
+    padding-right: 0;
+    padding-bottom: 0.5rem;
+  }
+
+  .day-row-card,
+  .day-meals-selects,
+  .l-form-grid,
+  .l-stats-grid,
+  .arch-recipe-grid,
+  .editorial-packages,
+  .f-row,
+  .basket-items {
+    grid-template-columns: 1fr;
+  }
+
+  .reservation-card,
+  .res-form,
+  .longevity-card-col,
+  .market-basket-card,
+  .ed-modal-box {
+    padding: 1.35rem;
+  }
+
+  .ed-footer {
+    padding-bottom: 5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .btn-editorial {
+    padding: 0.45rem 0.85rem;
+    font-size: 0.78rem;
+  }
+
+  .preset-buttons {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+
+  .sw-item {
+    font-size: 0.72rem;
+    padding: 0.36rem 0.62rem;
+  }
+}

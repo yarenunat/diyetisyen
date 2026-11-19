@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dyt. Yaren Studio — Matcha, Denge & Sezgisel Beslenme</title>
+  <meta name="description" content="Yasaksız, estetik ve sürdürülebilir beslenme. Pinterest tadında tarifler, kişiselleştirilmiş online diyet programları ve iyi yaşam ritüelleri." />
+  <!-- Google Fonts: Instrument Serif (Editorial), Plus Jakarta Sans (Modern Clean), Caveat (Handwritten Scrapbook) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;600;700&family=Instrument+Serif:ital@0;1&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Subtle Paper Grain Texture Overlay -->
+  <div class="grain-overlay" aria-hidden="true"></div>
+
+  <!-- Top Announcement Ticker -->
+  <div class="top-banner">
+    <div class="top-banner-content">
+      <span>🍵 Yeni sezon "Glow &amp; Gut" online danışmanlık kontenjanları açıldı</span>
+      <span class="dot">•</span>
+      <a href="#randevu">Ücretsiz 15 dk tanışma görüşmesi planla →</a>
+    </div>
+  </div>
+
+  <!-- Floating Glassmorphic Navbar -->
+  <header class="site-header" id="navbar">
+    <div class="nav-container">
+      <a href="#" class="brand-logo">
+        <span class="brand-icon">🌿</span>
+        <div class="brand-text">
+          <span class="brand-title">dyt. yaren</span>
+          <span class="brand-sub">nutrition &amp; glow studio</span>
+        </div>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#pano" class="nav-link">Pinterest Panosu</a>
+        <a href="#yaklasim" class="nav-link">Felsefemiz</a>
+        <a href="#ritim" class="nav-link">Wellness Hesaplayıcı</a>
+        <a href="#paketler" class="nav-link">Programlar</a>
+        <a href="#gunluk" class="nav-link">Danışan Günlüğü</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="saved-pins-btn" id="openSavedDrawerBtn" aria-label="Kaydedilen Pinlerim">
+          <span class="pin-icon">📌</span>
+          <span class="pin-label">Panom</span>
+          <span class="pin-count" id="savedPinCount">0</span>
+        </button>
+        <a href="#randevu" class="btn btn-primary btn-sm">Randevu Al ✨</a>
+        <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menüyü Aç">
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section">
+      <div class="container hero-grid">
+        <!-- Left Column: Editorial Copy + Interactive Mood Matcher -->
+        <div class="hero-copy">
+          <div class="sticker-badge">
+            <span class="sparkle">✦</span> kibrit kutusu peynir devri bitti
+          </div>
+
+          <h1 class="hero-title">
+            Kalori saymayı bırak, <br />
+            <em>tabağını ve bedenini</em> yeniden sev.
+          </h1>
+
+          <p class="hero-lead">
+            Sosyal hayatından, iced matcha latte’nden veya arkadaşlarınla yediğin pizzadan ödün vermeden; hormon dostu, estetik ve sürdürülebilir beslenme alanı.
+          </p>
+
+          <!-- Interactive Mini Mood Matcher -->
+          <div class="mood-matcher-card">
+            <div class="mood-header">
+              <span class="handwritten-label">bugün nasıl hissediyorsun? birini seç 👇</span>
+            </div>
+            <div class="mood-pills" role="tablist" aria-label="Günlük mod seçici">
+              <button class="mood-pill active" data-mood="enerji">😴 Enerjim dip</button>
+              <button class="mood-pill" data-mood="tatli">🍫 Tatlı krizindeyim</button>
+              <button class="mood-pill" data-mood="siskinlik">🌿 Şişkinlik var</button>
+              <button class="mood-pill" data-mood="fokus">💻 Sınav / İş stresi</button>
+            </div>
+            <div class="mood-prescription" id="moodPrescription">
+              <div class="prescription-icon" id="moodIcon">🍵</div>
+              <div class="prescription-body">
+                <span class="prescription-tag" id="moodTag">Dyt. Yaren’in Anlık Notu</span>
+                <p id="moodText">
+                  Sabah aç karnına sert kahve yerine <strong>Yulaf Sütlü Iced Matcha + 1 avuç çiğ badem</strong> dene. L-theanine kortizolü zıplatmadan 4 saat kesintisiz odak sağlar!
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="hero-cta-group">
+            <a href="#pano" class="btn btn-primary btn-lg">
+              Tarif &amp; İlham Panosunu Keşfet 📌
+            </a>
+            <a href="#paketler" class="btn btn-outline btn-lg">
+              Online Paketleri İncele
+            </a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-item">
+              <strong>+1.400</strong>
+              <span>Mutlu &amp; Özgür Danışan</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <strong>%0</strong>
+              <span>Yasaklı Besin Listesi</span>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+              <strong>120+</strong>
+              <span>Estetik &amp; Pratik Tarif</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Aesthetic Scrapbook / Polaroid Collage -->
+        <div class="hero-collage">
+          <!-- Decorative Washi Tape & Handwritten Note -->
+          <div class="floating-note note-top">
+            <span class="handwritten">“diyet değil, yaşam tarzı 💌”</span>
+          </div>
+
+          <div class="collage-grid">
+            <!-- Polaroid 1: Matcha & Breakfast -->
+            <div class="polaroid-card polaroid-1">
+              <div class="washi-tape tape-green"></div>
+              <div class="polaroid-img-wrap">
+                <img src="https://images.unsplash.com/photo-1515823064-d6e0c04616a7?auto=format&fit=crop&w=800&q=80" alt="Iced Matcha Latte" loading="eager" />
+                <span class="img-tag">08:45 AM • Matcha Glow</span>
+              </div>
+              <div class="polaroid-caption">
+                <span>güne kortizol dostu başlangıç 🍵</span>
+                <span class="caption-heart">♥ 428</span>
+              </div>
+            </div>
+
+            <!-- Polaroid 2: Berry Yogurt Bowl -->
+            <div class="polaroid-card polaroid-2">
+              <div class="washi-tape tape-peach"></div>
+              <div class="polaroid-img-wrap">
+                <img src="https://images.unsplash.com/photo-1490474418585-ba9bad8fd0ea?auto=format&fit=crop&w=800&q=80" alt="Sağlıklı Smoothie Bowl" loading="eager" />
+                <span class="img-tag">320 kcal • 22g protein</span>
+              </div>
+              <div class="polaroid-caption">
+                <span>tatlı krizine 5 dk’lık çözüm 🍓</span>
+                <span class="caption-heart">📌 Kaydet</span>
+              </div>
+            </div>
+
+            <!-- Aesthetic Sticky Card: Daily Ritual -->
+            <div class="sticky-card-widget">
+              <div class="sticky-pin"></div>
+              <p class="sticky-title">Günün Hatırlatması ✨</p>
+              <p class="sticky-quote">
+                “Dün akşam arkadaşlarınla tatlı yemiş olman, bugün öğün atlayacağın anlamına gelmez. Denge bir günde değil, haftada kurulur.”
+              </p>
+              <div class="sticky-footer">
+                <span>— Dyt. Yaren</span>
+                <span class="badge-mini">#mindfuleating</span>
+              </div>
+            </div>
+
+            <!-- Mini Aesthetic Profile Badge -->
+            <div class="profile-mini-card">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80" alt="Diyetisyen Yaren" class="avatar-img" />
+              <div class="profile-mini-info">
+                <strong>Dyt. Yaren Kaya</strong>
+                <span>Bütüncül Beslenme &amp; Gut Health</span>
+                <div class="online-status"><span class="pulse-dot"></span> Online Danışmanlık Aktif</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARQUEE RIBBON -->
+    <div class="marquee-ribbon" aria-hidden="true">
+      <div class="marquee-track">
+        <span>✦ YASAKSIZ BESLENME</span>
+        <span>🍵 ICED MATCHA &amp; İYİ YAŞAM</span>
+        <span>🍓 HORMON DOSTU TARİFLER</span>
+        <span>✨ SUÇLULUK OLMADAN TATLI</span>
+        <span>🥑 SEZGİSEL YEME PRATİKLERİ</span>
+        <span>💌 SÜRDÜRÜLEBİLİR RUTİNLER</span>
+        <span>🥣 BAĞIRSAK DOSTU (GUT-FRIENDLY)</span>
+        <span>✦ YASAKSIZ BESLENME</span>
+        <span>🍵 ICED MATCHA &amp; İYİ YAŞAM</span>
+        <span>🍓 HORMON DOSTU TARİFLER</span>
+        <span>✨ SUÇLULUK OLMADAN TATLI</span>
+        <span>🥑 SEZGİSEL YEME PRATİKLERİ</span>
+        <span>💌 SÜRDÜRÜLEBİLİR RUTİNLER</span>
+        <span>🥣 BAĞIRSAK DOSTU (GUT-FRIENDLY)</span>
+      </div>
+    </div>
+
+    <!-- PINTEREST MASONRY BOARD SECTION -->
+    <section class="pinterest-section" id="pano">
+      <div class="container">
+        <div class="section-header-board">
+          <div>
+            <span class="eyebrow">📌 PINTEREST TARİF &amp; MOODBOARD PANOSU</span>
+            <h2 class="section-title">Tabağına İlham Veren <em>Lezzet Panosu</em></h2>
+            <p class="section-subtitle">
+              Beğendiğin tarifleri <strong>📌 Pinle</strong> butonuyla kendi panona kaydet, üzerine tıklayarak malzemeleri ve diyetisyen tüyolarını incele.
+            </p>
+          </div>
+
+          <!-- Search & Filter Bar -->
+          <div class="board-controls">
+            <div class="search-box">
+              <span class="search-icon">🔍</span>
+              <input type="text" id="pinSearchInput" placeholder="Tarif, malzeme veya mod ara (örn: matcha, yulaf, protein)..." aria-label="Tarif ara" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Category Filter Pills -->
+        <div class="filter-bar" id="filterBar" role="tablist">
+          <button class="filter-chip active" data-filter="all">✨ Tümü</button>
+          <button class="filter-chip" data-filter="kahvalti">🥣 Kahvaltı &amp; Bowl</button>
+          <button class="filter-chip" data-filter="tatli">🍫 Suçluluksuz Tatlı</button>
+          <button class="filter-chip" data-filter="icecek">🍵 Matcha &amp; İçecek</button>
+          <button class="filter-chip" data-filter="tuzlu">🥑 Pratik Öğün &amp; Tuzlu</button>
+          <button class="filter-chip" data-filter="moodboard">💌 Motivasyon &amp; Rutin</button>
+        </div>
+
+        <!-- Interactive Daily Checklist Pin + Dynamic Masonry Grid -->
+        <div class="masonry-grid" id="masonryGrid">
+          <!-- JS will populate aesthetic pins + interactive self-care card -->
+        </div>
+      </div>
+    </section>
+
+    <!-- PHILOSOPHY / SCRAPBOOK COMPARISON SECTION -->
+    <section class="philosophy-section" id="yaklasim">
+      <div class="container">
+        <div class="philosophy-grid">
+          <!-- Left: Scrapbook Visual & Dietitian Bio -->
+          <div class="about-scrapbook">
+            <div class="scrapbook-frame">
+              <div class="washi-tape tape-top-left"></div>
+              <div class="washi-tape tape-bottom-right"></div>
+              <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=900&q=80" alt="Diyetisyen Yaren Stüdyo" class="about-photo" />
+              <div class="scrapbook-sticker sticker-matcha">🍵 Günde 2 kupa matcha garantili</div>
+              <div class="scrapbook-caption">
+                <span class="handwritten">Merhaba, ben Yaren! Tanıştığımıza çok sevindim 🤍</span>
+              </div>
+            </div>
+
+            <div class="credentials-strip">
+              <div class="cred-pill">🎓 Beslenme ve Diyetetik Lisans</div>
+              <div class="cred-pill">🌿 Fonksiyonel &amp; Mikrobiyota Beslenmesi</div>
+              <div class="cred-pill">🧠 Sezgisel Yeme Danışmanı</div>
+            </div>
+          </div>
+
+          <!-- Right: Manifesto & Old vs New Diet Comparison -->
+          <div class="philosophy-content">
+            <span class="eyebrow">✨ NEDEN BURASI FARKLI?</span>
+            <h2 class="section-title">Pazartesi Başlayıp Salı Bozulmayan <em>Gerçek Bir Ritim</em></h2>
+            <p class="philosophy-lead">
+              Üniversite sınavlarına hazırlanırken, ofiste yoğun mesai yaparken ya da hafta sonu arkadaşlarınla yeni açılan bir kafeyi denerken uygulayamadığın hiçbir liste "doğru liste" değildir.
+            </p>
+
+            <!-- Aesthetic Comparison Cards -->
+            <div class="comparison-cards">
+              <div class="comp-card comp-old">
+                <div class="comp-header">
+                  <span class="comp-badge badge-muted">Eski Nesil Diyet ❌</span>
+                </div>
+                <ul class="comp-list">
+                  <li>1 kibrit kutusu beyaz peynir, haşlanmış tatsız sebzeler</li>
+                  <li>Sosyal ortamlarda "ben diyetteyim" stresi</li>
+                  <li>Tek bir çikolata yediğinde "her şey bozuldu" suçluluğu</li>
+                  <li>Listeyi bırakınca fazlasıyla geri alınan kilolar</li>
+                </ul>
+              </div>
+
+              <div class="comp-card comp-new">
+                <div class="comp-header">
+                  <span class="comp-badge badge-matcha">Bizim Glow Yaklaşımımız ✨</span>
+                </div>
+                <ul class="comp-list">
+                  <li>Pinterest’ten fırlamış gibi görünen doyurucu ve pratik tabaklar</li>
+                  <li>Kahve &amp; tatlı buluşmalarına uyumlu esnek 80/20 dengesi</li>
+                  <li>Kan şekeri ve hormon döngüne göre enerji yönetimi</li>
+                  <li>WhatsApp’tan fotoğraf atarak anlık tabak yorumlama</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="signature-block">
+              <p class="handwritten-sig">“Amacımız tartıdaki rakamla savaşmak değil, aynadaki ışıltını parlatmak.”</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE WELLNESS & RHYTHM CALCULATOR -->
+    <section class="calculator-section" id="ritim">
+      <div class="container">
+        <div class="calc-wrapper">
+          <div class="calc-intro">
+            <span class="eyebrow">💧 İNTERAKTİF WELLNESS ARACI</span>
+            <h2 class="section-title">Kişisel <em>Glow &amp; Denge</em> Kartını Oluştur</h2>
+            <p>
+              Sıkıcı ve soğuk klinik tablolar yerine; bedeninin günlük su ihtiyacını, ideal enerji aralığını ve hedefine özel tabak formülünü saniyeler içinde keşfet.
+            </p>
+
+            <div class="calc-form">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="calcAge">Yaşın</label>
+                  <input type="number" id="calcAge" value="23" min="14" max="80" />
+                </div>
+                <div class="form-group">
+                  <label for="calcHeight">Boy (cm)</label>
+                  <input type="number" id="calcHeight" value="166" min="130" max="220" />
+                </div>
+                <div class="form-group">
+                  <label for="calcWeight">Kilo (kg)</label>
+                  <input type="number" id="calcWeight" value="62" min="35" max="200" />
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="calcActivity">Günlük Hareket Tempon</label>
+                  <select id="calcActivity">
+                    <option value="1.2">Masa başı / Ders çalışma ağırlıklı (Az hareketli)</option>
+                    <option value="1.375" selected>Haftada 2-3 gün yürüyüş veya pilates</option>
+                    <option value="1.55">Haftada 4-5 gün aktif antrenman</option>
+                    <option value="1.725">Çok yoğun spor / Her gün yüksek tempo</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="calcGoal">Öncelikli Hedefin</label>
+                  <select id="calcGoal">
+                    <option value="lose" selected>Sağlıklı Yağ Yakımı &amp; Hafifleme ✨</option>
+                    <option value="balance">Enerji Artışı &amp; Sezgisel Denge 🍵</option>
+                    <option value="tone">Sıkılaşma &amp; Kas Koruma / Artışı 💪</option>
+                  </select>
+                </div>
+              </div>
+
+              <button type="button" class="btn btn-primary btn-block" id="calculateBtn">
+                Wellness Kartımı Güncelle ✨
+              </button>
+            </div>
+          </div>
+
+          <!-- Aesthetic Result Receipt / Card -->
+          <div class="calc-result-card" id="calcResultCard">
+            <div class="receipt-top-tape"></div>
+            <div class="receipt-header">
+              <span class="receipt-brand">DYT. YAREN • DAILY GLOW RECEIPT</span>
+              <span class="receipt-date" id="receiptDate">BUGÜN</span>
+            </div>
+
+            <div class="receipt-metrics">
+              <div class="metric-box">
+                <span class="metric-label">Günlük Enerji Ritmi</span>
+                <strong class="metric-val" id="resCalories">1.680 kcal</strong>
+                <span class="metric-sub" id="resGoalLabel">Nazik kalori açığı ile sürdürülebilir incelme</span>
+              </div>
+              <div class="metric-box metric-water">
+                <span class="metric-label">Günlük Su Hedefi</span>
+                <strong class="metric-val" id="resWater">2.2 Litre</strong>
+                <span class="metric-sub" id="resWaterGlasses">💧 Yaklaşık 9 su bardağı + 1 bitki çayı</span>
+              </div>
+            </div>
+
+            <div class="macro-bars">
+              <div class="macro-item">
+                <div class="macro-label-row">
+                  <span>🥑 Sağlıklı Yağ &amp; Hormon</span>
+                  <strong id="resFat">55g</strong>
+                </div>
+                <div class="progress-bar"><div class="progress-fill fill-peach" style="width: 30%"></div></div>
+              </div>
+              <div class="macro-item">
+                <div class="macro-label-row">
+                  <span>🍳 Protein (Tokluk &amp; Işıltı)</span>
+                  <strong id="resProtein">98g</strong>
+                </div>
+                <div class="progress-bar"><div class="progress-fill fill-matcha" style="width: 35%"></div></div>
+              </div>
+              <div class="macro-item">
+                <div class="macro-label-row">
+                  <span>🍓 Kompleks Karbonhidrat</span>
+                  <strong id="resCarb">185g</strong>
+                </div>
+                <div class="progress-bar"><div class="progress-fill fill-butter" style="width: 45%"></div></div>
+              </div>
+            </div>
+
+            <div class="receipt-footer-tip">
+              <span class="tip-badge">💡 Diyetisyen Önerisi</span>
+              <p id="resBmiNote">
+                Beden kitle indeksin ideal aralıkta (22.5). Tartıya odaklanmak yerine öğünlerinde protein + lif dengesini kurarak bel çevresi ödemini rahatça atabilirsin!
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROGRAMS / PACKAGES SECTION -->
+    <section class="packages-section" id="paketler">
+      <div class="container">
+        <div class="section-center-header">
+          <span class="eyebrow">💌 ONLINE DANIŞMANLIK PROGRAMLARI</span>
+          <h2 class="section-title">Senin Ritmine Uygun <em>Programı Seç</em></h2>
+          <p class="section-subtitle">
+            Dünyanın neresinde olursan ol; görüntülü görüşmeler, sana özel tarif kitapçıkları ve birebir WhatsApp motivasyonuyla yanındayım.
+          </p>
+        </div>
+
+        <div class="packages-grid">
+          <!-- Package 1: Campus & Flex -->
+          <div class="package-card">
+            <div class="package-tag">Öğrenci &amp; Yoğun Tempo Dostu</div>
+            <h3 class="package-name">Campus &amp; Pratik Glow</h3>
+            <p class="package-desc">
+              Yurt hayatı, kampüs temposu veya yoğun iş günlerinde 10 dakikada hazırlanan bütçe dostu listeler.
+            </p>
+            <div class="package-price">
+              <span class="price-amount">₺2.400</span>
+              <span class="price-period">/ 4 Hafta</span>
+            </div>
+            <ul class="package-features">
+              <li>✦ Haftalık yenilenen pratik &amp; ekonomik menüler</li>
+              <li>✦ Dışarıda / yemekhanede doğru seçim rehberi</li>
+              <li>✦ Haftada 2 kez sesli/yazılı kontrol</li>
+              <li>✦ "5 Dakikada Yulaf &amp; Atıştırmalık" e-kitapçığı</li>
+            </ul>
+            <button class="btn btn-outline btn-block select-package-btn" data-package="Campus & Pratik Glow (4 Hafta)">
+              Bu Programla Başla →
+            </button>
+          </div>
+
+          <!-- Package 2: Matcha Club (Featured) -->
+          <div class="package-card package-featured">
+            <div class="featured-ribbon">✨ En Çok Tercih Edilen</div>
+            <div class="package-tag">Tam Dönüşüm &amp; Birebir Takip</div>
+            <h3 class="package-name">Matcha &amp; Soul Club</h3>
+            <p class="package-desc">
+              Sadece kilo vermek değil; bağırsak sağlığını onarmak, tatlı krizlerini bitirmek ve kendi beslenme ritmini kurmak isteyenlere.
+            </p>
+            <div class="package-price">
+              <span class="price-amount">₺3.200</span>
+              <span class="price-period">/ 4 Hafta</span>
+            </div>
+            <ul class="package-features">
+              <li>✦ Her hafta 30 dk birebir görüntülü görüşme</li>
+              <li>✦ 7/24 WhatsApp üzerinden anlık tabak fotoğrafı takibi</li>
+              <li>✦ Kan tahliline ve regl döngüsüne özel beslenme</li>
+              <li>✦ Sosyal hayat / kahve / seyahat telafi planları</li>
+              <li>✦ Tüm Pinterest Tarif Koleksiyonu PDF erişimi</li>
+            </ul>
+            <button class="btn btn-primary btn-block select-package-btn" data-package="Matcha & Soul Club (Birebir Takip)">
+              Kontenjan Ayırt ✨
+            </button>
+          </div>
+
+          <!-- Package 3: Gut & Hormone Reset -->
+          <div class="package-card">
+            <div class="package-tag">8 Haftalık Derinlemesine Program</div>
+            <h3 class="package-name">Glow &amp; Gut Reset</h3>
+            <p class="package-desc">
+              PKOS, insülin direnci, kronik şişkinlik veya duygusal yeme döngüsünü kalıcı olarak kırmak için 2 aylık yolculuk.
+            </p>
+            <div class="package-price">
+              <span class="price-amount">₺5.600</span>
+              <span class="price-period">/ 8 Hafta</span>
+            </div>
+            <ul class="package-features">
+              <li>✦ 8 adet görüntülü seans &amp; haftalık menü revizyonu</li>
+              <li>✦ Bağırsak dostu anti-inflamatuar tarif protokolü</li>
+              <li>✦ Duygusal açlık &amp; gece yeme günlüğü analizi</li>
+              <li>✦ Sürdürülebilir koruma programı mezuniyet rehberi</li>
+            </ul>
+            <button class="btn btn-outline btn-block select-package-btn" data-package="Glow & Gut Reset (8 Hafta)">
+              Bu Programla Başla →
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CLIENT DIARY / POLAROID & POST-IT REVIEWS -->
+    <section class="diary-section" id="gunluk">
+      <div class="container">
+        <div class="section-center-header">
+          <span class="eyebrow">📸 DANIŞAN GÜNLÜĞÜ &amp; GERÇEK DENEYİMLER</span>
+          <h2 class="section-title">Panolardan Taşan <em>Mutlu Mesajlar</em></h2>
+          <p class="section-subtitle">
+            Aç kalmadan, sosyal hayattan kopmadan değişen alışkanlıklar ve danışanlarımın kendi tabaklarından kareler.
+          </p>
+        </div>
+
+        <div class="diary-board">
+          <!-- Post-it 1 -->
+          <div class="diary-card diary-postit postit-yellow">
+            <div class="washi-tape tape-green"></div>
+            <p class="diary-text">
+              “Yaren abla vize haftamda hiç kriz geçirmeden 2.4 kg verdim!! Eskiden ders çalışırken paket paket bisküvi yerdim, verdiğin kakaolu chia puding tarifi hayatımı kurtardı 😭🍫”
+            </p>
+            <div class="diary-author">
+              <strong>Zeynep, 21</strong>
+              <span>Endüstri Müh. Öğrencisi • 6 Haftada -5.8 kg</span>
+            </div>
+          </div>
+
+          <!-- Polaroid Review 2 -->
+          <div class="diary-card diary-polaroid">
+            <img src="https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=600&q=80" alt="Danışan Kahvaltı Tabağı" />
+            <div class="diary-polaroid-body">
+              <p class="diary-text">
+                “İlk defa bir diyet listesini hazırlarken fotoğrafını çekip Instagram’a atmak istiyorum. Hem karnım doyuyor hem cildim parlamaya başladı ✨”
+              </p>
+              <div class="diary-author">
+                <strong>Selin, 26</strong>
+                <span>Dijital Pazarlama Uzmanı • 2 Ayda -7.2 kg</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Post-it 3 -->
+          <div class="diary-card diary-postit postit-peach">
+            <div class="washi-tape tape-peach"></div>
+            <p class="diary-text">
+              “PKOS yüzünden ne yapsam kilo veremiyorum sanıyordum. Sabah kahvemi yemekten sonraya çekmek ve eklediğin tohum kaseleriyle şişkinliğim 10 günde bitti. İyi ki varsın 🌿”
+            </p>
+            <div class="diary-author">
+              <strong>Melis, 24</strong>
+              <span>Mimar • Hormon &amp; Gut Dengesi</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BOOKING / APPOINTMENT SECTION -->
+    <section class="booking-section" id="randevu">
+      <div class="container">
+        <div class="booking-card">
+          <div class="booking-info">
+            <span class="eyebrow">🍵 TANISMA ZAMANI</span>
+            <h2 class="section-title">Kendi Hikayene <em>Bugün Başla</em></h2>
+            <p>
+              Aklındaki soruları sormak, sana hangi paketin uygun olduğunu konuşmak veya hemen başlamak için formu doldur. İstersen doğrudan WhatsApp üzerinden de ulaşabilirsin!
+            </p>
+
+            <div class="contact-perks">
+              <div class="perk-item">
+                <span class="perk-icon">💬</span>
+                <div>
+                  <strong>Ücretsiz 15 Dk Ön Görüşme</strong>
+                  <span>Hedeflerini konuşup enerjimizi tartalım.</span>
+                </div>
+              </div>
+              <div class="perk-item">
+                <span class="perk-icon">📋</span>
+                <div>
+                  <strong>Kişiye Özel Hazırlık</strong>
+                  <span>Hazır fotokopi liste yok, tamamen senin rutinine özel.</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="social-pills">
+              <span class="social-pill">📸 Instagram: @dyt.yarenstudio</span>
+              <span class="social-pill">📌 Pinterest: @dytyarenglow</span>
+              <span class="social-pill">🎥 TikTok: @matchawithyaren</span>
+            </div>
+          </div>
+
+          <form class="booking-form" id="bookingForm">
+            <h3 class="form-title">Ön Görüşme &amp; Randevu Kartı ✨</h3>
+            <div class="form-group">
+              <label for="clientName">Adın Soyadın</label>
+              <input type="text" id="clientName" required placeholder="Örn: Ece Yılmaz" />
+            </div>
+
+            <div class="form-row-2">
+              <div class="form-group">
+                <label for="clientPhone">Telefon / WhatsApp</label>
+                <input type="tel" id="clientPhone" required placeholder="05XX XXX XX XX" />
+              </div>
+              <div class="form-group">
+                <label for="clientProgram">İlgilendiğin Program</label>
+                <select id="clientProgram">
+                  <option value="Matcha & Soul Club (Birebir Takip)">Matcha &amp; Soul Club ✨</option>
+                  <option value="Campus & Pratik Glow (4 Hafta)">Campus &amp; Pratik Glow 🥣</option>
+                  <option value="Glow & Gut Reset (8 Hafta)">Glow &amp; Gut Reset 🌿</option>
+                  <option value="Ücretsiz 15 Dk Ön Görüşme">Henüz kararsızım (Ön Görüşme)</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="clientNote">Kendinden ve hedefinden kısaca bahset 💌</label>
+              <textarea id="clientNote" rows="3" placeholder="Örn: Tatlı krizlerimi yönetmek ve yaza kadar enerjimi düşürmeden 5-6 kilo vermek istiyorum..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block btn-lg">
+              Randevu Talebimi Oluştur &amp; Gönder 🍵
+            </button>
+            <p class="form-footnote">Bilgilerin gizli tutulur • 24 saat içinde dönüş yapılır.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="brand-title">🌿 dyt. yaren studio</span>
+        <p>Sezgisel, estetik ve sürdürülebilir beslenme alanı.</p>
+      </div>
+      <div class="footer-links">
+        <a href="#pano">Tarif Panosu</a>
+        <a href="#yaklasim">Felsefemiz</a>
+        <a href="#ritim">Wellness Hesaplayıcı</a>
+        <a href="#paketler">Programlar</a>
+      </div>
+      <div class="footer-copy">
+        © 2026 Dyt. Yaren Studio • <a href="../index.html" style="text-decoration: underline; font-weight: 600; color: var(--matcha-dark);">← Tüm Tasarımlara Dön</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- RECIPE / PIN DETAIL MODAL -->
+  <div class="modal-backdrop" id="pinModal" aria-hidden="true">
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="closeModalBtn" aria-label="Kapat">✕</button>
+      <div class="modal-grid" id="modalContent">
+        <!-- Populated dynamically via JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- SAVED PINS DRAWER ("BENİM WELLNESS PANOM") -->
+  <div class="drawer-backdrop" id="savedDrawerBackdrop" aria-hidden="true">
+    <aside class="saved-drawer" aria-label="Kaydedilen Pinlerim">
+      <div class="drawer-header">
+        <div>
+          <span class="eyebrow">📌 KİŞİSEL KOLEKSİYONUN</span>
+          <h3>Benim Wellness Panom</h3>
+        </div>
+        <button class="modal-close" id="closeDrawerBtn" aria-label="Panoyu Kapat">✕</button>
+      </div>
+      <div class="drawer-body" id="savedDrawerList">
+        <!-- Populated dynamically via JS -->
+      </div>
+      <div class="drawer-footer">
+        <p class="drawer-hint">Beğendiğin tarifleri kaydet, alışverişte veya mutfakta tek tıkla aç ✨</p>
+      </div>
+    </aside>
+  </div>
+
+  <!-- FLOATING SITE SWITCHER DOCK -->
+  <div class="floating-switcher" aria-label="Siteler arası hızlı geçiş">
+    <a href="../index.html" class="sw-item" title="Ana Vitrin">✨ Vitrin</a>
+    <a href="../site-1/index.html" class="sw-item active" title="1. Site: Matcha & Soft Cream">🍵 1. Site</a>
+    <a href="../site-2/index.html" class="sw-item" title="2. Site: Blush & Berry">🍒 2. Site</a>
+    <a href="../site-3/index.html" class="sw-item" title="3. Site: Casa Solis Akdeniz">🍋 3. Site</a>
+    <a href="../site-4/index.html" class="sw-item" title="4. Site: Kinetic Fuel (Erkek & Sporcu)">⚡ 4. Site</a>
+  </div>
+
+  <!-- TOAST NOTIFICATION -->
+  <div class="toast-container" id="toastContainer" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
