@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AURA &amp; CIRCADIAN LAB — Dyt. Yaren | Biyolojik Saat, Dopamin &amp; Gece Krizi Beslenmesi</title>
+  <meta name="description" content="VisionOS Blurmorphism ve Holografik Aura estetiğinde sirkadiyen ritim çarkı, dopamin bento kutusu tasarlayıcı, kafein simülatörü ve gece krizi tarifleri." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Holographic Aurora Ambient Background Orbs -->
+  <div class="aura-canvas" aria-hidden="true">
+    <div class="aura-orb orb-mint"></div>
+    <div class="aura-orb orb-violet"></div>
+    <div class="aura-orb orb-coral"></div>
+    <div class="aura-orb orb-gold"></div>
+  </div>
+  <div class="aura-cursor" id="auraCursor" aria-hidden="true"></div>
+
+  <!-- Top Bio-Ticker -->
+  <div class="bio-topbar">
+    <div class="container bio-topbar-inner">
+      <span class="mono-pill">🔮 AURA &amp; CIRCADIAN NUTRITION LAB • BY DYT. YAREN</span>
+      <span class="mono-sub">DOPAMİN MUTFAĞI • UYKU &amp; KORTİZOL DENGESİ • GECE KRİZİ KALKANI</span>
+      <a href="#aura-booking" class="top-cta">ÜCRETSİZ BİYORİTİM ANALİZİ →</a>
+    </div>
+  </div>
+
+  <!-- Floating VisionOS Glass Header -->
+  <header class="aura-header">
+    <div class="container aura-nav">
+      <a href="#" class="aura-logo">
+        <span class="logo-orb">🌙</span>
+        <div class="logo-copy">
+          <strong>AURA LAB</strong>
+          <span>circadian &amp; dopamine studio</span>
+        </div>
+      </a>
+
+      <nav class="aura-links" id="auraLinks">
+        <a href="#circadian-wheel">Biyolojik Saat Çarkı</a>
+        <a href="#bento-designer">Gece &amp; Odak Bento’su</a>
+        <a href="#midnight-board">Dopamin Panosu</a>
+        <a href="#aura-programs">Programlar</a>
+      </nav>
+
+      <div class="aura-actions">
+        <button class="aura-saved-btn" id="openAuraDrawerBtn" aria-label="Kaydedilen Tariflerim">
+          <span>🔮</span>
+          <span class="saved-txt">Panom</span>
+          <span class="saved-badge" id="auraSavedCount">0</span>
+        </button>
+        <a href="#aura-booking" class="btn-holo btn-hide-sm">Ritmimi Kur ✨</a>
+        <button class="aura-burger" id="auraBurger" aria-label="Menü">
+          <span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION + CAFFEINE / CORTISOL MINI SIMULATOR -->
+    <section class="aura-hero">
+      <div class="container hero-layout">
+        <div class="hero-copy-col">
+          <div class="holo-tag">
+            <span class="pulse-mint"></span> GECE 01:00 TATLI KRİZLERİNE &amp; BEYİN SİSİNE SON
+          </div>
+
+          <h1 class="aura-title">
+            Ne yediğin kadar, <em>beyninin ve biyolojik saatinin</em> ne zaman istediği önemli.
+          </h1>
+
+          <p class="aura-lead">
+            Gece ders çalışırken veya dizi izlerken buzdolabını açmanı sağlayan şey iradesizlik değil; düşen dopamin ve bozulan kortizol eğrisi. Bedeninin sirkadiyen ritmiyle çalışan yeni nesil **Bio-Aesthetic** beslenme stüdyosu.
+          </p>
+
+          <div class="hero-cta-row">
+            <a href="#bento-designer" class="btn-holo btn-lg">🍱 Dopamin Bento Kutunu Tasarla</a>
+            <a href="#circadian-wheel" class="btn-glass btn-lg">🕒 24 Saatlik Biyoritim Çarkı</a>
+          </div>
+
+          <div class="hero-quick-stats">
+            <div class="q-stat">
+              <strong>%84</strong>
+              <span>Gece Yeme Ataklarında Azalma</span>
+            </div>
+            <div class="q-stat">
+              <strong>+3.2 Saat</strong>
+              <span>Kesintisiz Derin Odak (Deep Work)</span>
+            </div>
+            <div class="q-stat">
+              <strong>0 Yasak</strong>
+              <span>Kahve &amp; Gece Atıştırmalığı Dostu</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Interactive Caffeine & Sleep Biohacking Widget -->
+        <div class="hero-widget-col">
+          <div class="glass-card caffeine-card">
+            <div class="caffeine-head">
+              <div>
+                <span class="mono-label">☕ KAFEİN &amp; UYKU SİMÜLATÖRÜ</span>
+                <h3>Gece Beyninde Ne Kadar Kafein Kalıyor?</h3>
+              </div>
+              <span class="live-chip">CANLI TEST</span>
+            </div>
+
+            <p class="caffeine-desc">
+              Bugün içtiğin son içeceği ve saatini seç; gece <strong>23:30</strong>’da kanında kalan aktif kafeini ve Dyt. Yaren’in panzehir tarifini gör:
+            </p>
+
+            <div class="caff-selectors">
+              <div class="caff-group">
+                <label>SON İÇECEĞİN</label>
+                <div class="caff-pills" id="drinkPills">
+                  <button type="button" class="c-pill active" data-mg="160" data-name="Iced Double Americano">☕ Double Americano (160mg)</button>
+                  <button type="button" class="c-pill" data-mg="120" data-name="Büyük Filtre Kahve">🥤 Filtre Kahve (120mg)</button>
+                  <button type="button" class="c-pill" data-mg="70" data-name="Iced Matcha Latte">🍵 Matcha Latte (70mg)</button>
+                  <button type="button" class="c-pill" data-mg="200" data-name="Soğuk Brew / Enerji">⚡ Cold Brew (200mg)</button>
+                </div>
+              </div>
+
+              <div class="caff-group">
+                <label>İÇTİĞİN SAAT: <strong id="drinkTimeLabel" style="color: #5EEAD4;">16:30</strong></label>
+                <input type="range" id="drinkTimeSlider" min="9" max="21" step="0.5" value="16.5" class="aura-slider" />
+                <div class="slider-marks">
+                  <span>09:00</span>
+                  <span>13:00</span>
+                  <span>17:00</span>
+                  <span>21:00</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="caff-result-box">
+              <div class="caff-meter-col">
+                <span class="mono-sub">23:30’DA AKTİF KAFEİN</span>
+                <strong class="caff-mg-val" id="remCaffeineVal">61 mg</strong>
+                <span class="caff-status-badge" id="caffStatusBadge">⚠️ Derin Uykuyu %30 Böler</span>
+              </div>
+              <div class="caff-antidote-col">
+                <span class="mono-sub">🔮 DYT. YAREN’İN PANZEHİRİ</span>
+                <p id="caffAntidoteText">
+                  Akşam 21:30’da <strong>Vişne Suyu + Magnezyum Bisglisinat (Sleepy Girl Mocktail)</strong> iç ve akşam yemeğine 1 porsiyon kompleks karbonhidrat ekle.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE 24-HOUR CIRCADIAN RHYTHM WHEEL -->
+    <section class="circadian-section" id="circadian-wheel">
+      <div class="container">
+        <div class="section-head-center">
+          <span class="mono-label">🕒 BİYOLOJİK SAAT &amp; HORMON SENKRONİZASYONU</span>
+          <h2 class="section-title">24 Saatlik <em>Sirkadiyen Beslenme</em> Çarkı</h2>
+          <p class="section-sub">
+            Günün saatini seç; o an vücudunda hangi hormonun zirve yaptığını ve metabolizmanı hızlandıran en doğru tabak/içecek formülünü keşfet.
+          </p>
+        </div>
+
+        <div class="circadian-grid">
+          <!-- Left: Animated SVG 24-Hour Clock Wheel -->
+          <div class="clock-stage glass-card">
+            <div class="clock-time-Selector">
+              <button class="time-node active" data-slot="morning">🌅 08:00 • Kortizol Uyanışı</button>
+              <button class="time-node" data-slot="noon">⚡ 12:30 • Dopamin &amp; Odak</button>
+              <button class="time-node" data-slot="afternoon">🍵 16:00 • Kan Şekeri Köprüsü</button>
+              <button class="time-node" data-slot="evening">🌇 19:30 • Serotonin &amp; Sindirim</button>
+              <button class="time-node" data-slot="midnight">🌙 23:00 • Gece Krizi &amp; Melatonin</button>
+            </div>
+
+            <div class="svg-wheel-wrap">
+              <div class="wheel-aura-glow" id="wheelAuraGlow"></div>
+              <svg class="circadian-svg" viewBox="0 0 320 320" aria-label="Sirkadiyen Ritim Çarkı">
+                <defs>
+                  <linearGradient id="auraRingGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#5EEAD4" />
+                    <stop offset="50%" stop-color="#C084FC" />
+                    <stop offset="100%" stop-color="#FB7185" />
+                  </linearGradient>
+                </defs>
+                <!-- Outer Dashed Orbit -->
+                <circle cx="160" cy="160" r="144" fill="none" stroke="rgba(255,255,255,0.12)" stroke-width="2" stroke-dasharray="6 8" />
+                <!-- Active Arc Track -->
+                <circle cx="160" cy="160" r="126" fill="none" stroke="rgba(255,255,255,0.08)" stroke-width="14" />
+                <circle cx="160" cy="160" r="126" fill="none" stroke="url(#auraRingGrad)" stroke-width="14" stroke-linecap="round" stroke-dasharray="791" id="wheelActiveArc" stroke-dashoffset="580" />
+
+                <!-- Rotating Pointer Hand -->
+                <g id="wheelPointerGroup" style="transform: rotate(-70deg); transform-origin: 160px 160px; transition: transform 0.65s cubic-bezier(0.34, 1.56, 0.64, 1);">
+                  <line x1="160" y1="160" x2="160" y2="38" stroke="#5EEAD4" stroke-width="3" stroke-linecap="round" />
+                  <circle cx="160" cy="34" r="9" fill="#5EEAD4" />
+                </g>
+
+                <!-- Center Hub -->
+                <circle cx="160" cy="160" r="64" fill="rgba(13, 15, 24, 0.92)" stroke="rgba(255,255,255,0.22)" stroke-width="2" />
+                <text x="160" y="152" text-anchor="middle" fill="#5EEAD4" font-family="JetBrains Mono" font-size="22" font-weight="700" id="wheelCenterTime">08:00</text>
+                <text x="160" y="176" text-anchor="middle" fill="#E2E8F0" font-family="Plus Jakarta Sans" font-size="11" font-weight="600" id="wheelCenterPhase">KORTİZOL ZİRVESİ</text>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Right: Active Time-Slot Bio-Prescription Card -->
+          <div class="circadian-detail glass-card" id="circadianDetailCard">
+            <!-- Populated dynamically via JS -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE 3D ANIMATED DOPAMINE & LATE-NIGHT BENTO BOX DESIGNER -->
+    <section class="bento-designer-section" id="bento-designer">
+      <div class="container">
+        <div class="section-head-center">
+          <span class="mono-label">🍱 3D ANİMASYONLU DOPAMİN &amp; GECE BENTO STÜDYOSU</span>
+          <h2 class="section-title">Kendi <em>Mood &amp; Snack Bento</em> Kutunu Tasarla</h2>
+          <p class="section-sub">
+            Ders çalışırken, ofiste veya gece dizi izlerken paketli abur cubur yerine beynine dopamin ve sakinlik veren 3 bölmeli cam Bento kutunu oluştur!
+          </p>
+        </div>
+
+        <div class="bento-studio-grid">
+          <!-- Left: 3 Compartment Ingredient Selectors -->
+          <div class="bento-controls">
+            <div class="bento-step glass-card">
+              <div class="b-step-head">
+                <span class="b-step-num">BÖLME 01</span>
+                <h3>Dopamin &amp; Tokluk Bazını Seç</h3>
+              </div>
+              <div class="b-opt-grid" id="bentoSlot1Opts"></div>
+            </div>
+
+            <div class="bento-step glass-card">
+              <div class="b-step-head">
+                <span class="b-step-num">BÖLME 02</span>
+                <h3>Çıtır / Tatlı İsteği Kalkanını Seç</h3>
+              </div>
+              <div class="b-opt-grid" id="bentoSlot2Opts"></div>
+            </div>
+
+            <div class="bento-step glass-card">
+              <div class="b-step-head">
+                <span class="b-step-num">BÖLME 03</span>
+                <h3>Fonksiyonel İksir &amp; Mocktail Seç</h3>
+              </div>
+              <div class="b-opt-grid" id="bentoSlot3Opts"></div>
+            </div>
+          </div>
+
+          <!-- Right: 3D Animated Neon-Glass Bento Box Preview -->
+          <div class="bento-preview-card glass-card">
+            <div class="bento-preview-top">
+              <span class="mono-label" style="margin:0;">🔮 CANLI CAM BENTO KUTUSU</span>
+              <button type="button" class="shake-bento-btn" id="shakeBentoBtn">🎲 Kutuyu Çalkala</button>
+            </div>
+
+            <!-- Interactive 3D Glass Bento Tray -->
+            <div class="bento-tray-stage" id="bentoTrayStage">
+              <div class="bento-ambient-glow"></div>
+              <div class="glass-bento-box" id="glassBentoBox">
+                <!-- Slot 1 (Left Tall Compartment) -->
+                <div class="bento-cell cell-main" id="bentoCell1">
+                  <div class="cell-svg-art" id="cellArt1"></div>
+                  <div class="cell-label-pill">
+                    <span id="cellName1">Somon Onigiri</span>
+                    <strong id="cellMacro1">18g Prot</strong>
+                  </div>
+                </div>
+                <!-- Slot 2 (Top Right Compartment) -->
+                <div class="bento-cell cell-crunch" id="bentoCell2">
+                  <div class="cell-svg-art" id="cellArt2"></div>
+                  <div class="cell-label-pill">
+                    <span id="cellName2">Çikolatalı Çilek</span>
+                    <strong id="cellMacro2">Antioksidan</strong>
+                  </div>
+                </div>
+                <!-- Slot 3 (Bottom Right Elixir Compartment) -->
+                <div class="bento-cell cell-elixir" id="bentoCell3">
+                  <div class="cell-svg-art" id="cellArt3"></div>
+                  <div class="cell-label-pill">
+                    <span id="cellName3">Vişne Mocktail</span>
+                    <strong id="cellMacro3">Magnezyum+</strong>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <h3 class="bento-combo-title" id="bentoComboTitle">Midnight Focus &amp; Calm Bento</h3>
+
+            <!-- Neuro-Scores & Macros -->
+            <div class="bento-neuro-meters">
+              <div class="neuro-box">
+                <div class="neuro-row">
+                  <span>🧠 Dopamin &amp; Odak</span>
+                  <strong id="neuroDopamine">96%</strong>
+                </div>
+                <div class="neuro-track"><div class="neuro-fill fill-mint" id="barDopamine" style="width: 96%"></div></div>
+              </div>
+              <div class="neuro-box">
+                <div class="neuro-row">
+                  <span>🌙 Uyku &amp; Melatonin Dostu</span>
+                  <strong id="neuroSleep">92%</strong>
+                </div>
+                <div class="neuro-track"><div class="neuro-fill fill-violet" id="barSleep" style="width: 92%"></div></div>
+              </div>
+            </div>
+
+            <div class="bento-macro-pills">
+              <div class="bm-pill">
+                <span>Toplam Enerji</span>
+                <strong id="bentoTotalKcal">345 kcal</strong>
+              </div>
+              <div class="bm-pill">
+                <span>Protein</span>
+                <strong id="bentoTotalProt">21g</strong>
+              </div>
+              <div class="bm-pill">
+                <span>Şeker Yükü</span>
+                <strong id="bentoGlycemic">Düşük (GL)</strong>
+              </div>
+            </div>
+
+            <p class="bento-coach-note" id="bentoCoachNote">
+              🔮 <strong>Dyt. Yaren’in Biyoritim Notu:</strong> Bu kutu kan şekerini zıplatmadan beynine tirozin ve triptofan sağlar; gece 23:00’te bile şişkinlik yapmadan tatlı/tuzlu krizini bitirir.
+            </p>
+
+            <button type="button" class="btn-holo btn-full" id="saveCustomBentoBtn">
+              📌 Bu Bento Kutusunu Panoma Kaydet
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PINTEREST MIDNIGHT & DOPAMINE RECIPE BOARD -->
+    <section class="midnight-board-section" id="midnight-board">
+      <div class="container">
+        <div class="board-top-bar">
+          <div>
+            <span class="mono-label">📌 PINTEREST DOPAMINE &amp; NIGHT KITCHEN</span>
+            <h2 class="section-title">Zihin Açan &amp; Gece Kurtaran <em>Tarif Panosu</em></h2>
+          </div>
+
+          <div class="aura-search-box">
+            <input type="text" id="auraSearchInput" placeholder="🔍 Tarif, hormon veya mod ara (örn: mocktail, dopamin, gece, edamame)..." />
+          </div>
+        </div>
+
+        <div class="aura-filter-row" id="auraFilterRow">
+          <button class="a-chip active" data-cat="all">✨ Tümü</button>
+          <button class="a-chip" data-cat="night">🌙 Gece 23:00 Kurtarıcıları</button>
+          <button class="a-chip" data-cat="focus">🧠 ADHD &amp; Derin Odak (Dopamin)</button>
+          <button class="a-chip" data-cat="elixir">🍹 Uyku &amp; Kortizol Mocktailleri</button>
+        </div>
+
+        <div class="aura-masonry" id="auraMasonry"></div>
+      </div>
+    </section>
+
+    <!-- BIOHACKING & CIRCADIAN PROGRAMS -->
+    <section class="aura-programs-section" id="aura-programs">
+      <div class="container">
+        <div class="section-head-center">
+          <span class="mono-label">🔮 ONLINE BİYORİTİM &amp; BESLENME DANIŞMANLIĞI</span>
+          <h2 class="section-title">Senin <em>Aura &amp; Ritim</em> Programın</h2>
+        </div>
+
+        <div class="aura-packages-grid">
+          <div class="aura-pkg glass-card">
+            <span class="mono-sub">4 HAFTALIK ODAK &amp; ENERJİ</span>
+            <h3>Dopamine &amp; Focus Protocol</h3>
+            <p>Sınav dönemi öğrencileri, yazılımcılar, tasarımcılar ve gün boyu beyin sisi (brain fog) yaşayanlar için zihin açıcı beslenme.</p>
+            <div class="aura-price">₺2.650 <span>/ 4 Hafta</span></div>
+            <ul>
+              <li>✦ Kafein ve çalışma saatlerine senkronize öğün planı</li>
+              <li>✦ Dikkat dağınıklığını önleyen yüksek dopaminli kahvaltılar</li>
+              <li>✦ Masa başı kıtır atıştırmalık &amp; Bento rehberi</li>
+              <li>✦ Haftalık görüntülü görüşme &amp; WhatsApp takibi</li>
+            </ul>
+            <button class="btn-glass btn-full pick-aura-pkg" data-pkg="Dopamine & Focus Protocol (4 Hafta)">
+              Programı Seç →
+            </button>
+          </div>
+
+          <div class="aura-pkg glass-card pkg-holo-featured">
+            <div class="holo-badge">✨ EN POPÜLER • GECE KUŞU DOSTU</div>
+            <span class="mono-sub">6 HAFTALIK TAM SENKRONİZASYON</span>
+            <h3>Circadian &amp; Night-Owl Reset</h3>
+            <p>Gece geç uyuyan, akşamları duygusal yeme veya tatlı atağı yaşayan ve sabahları yorgun uyananlar için biyolojik saat dönüşümü.</p>
+            <div class="aura-price">₺3.750 <span>/ 6 Hafta</span></div>
+            <ul>
+              <li>✦ Uyku-uyanıklık saatine özel esnek Sirkadiyen İntermittent Fasting</li>
+              <li>✦ Gece 22:00 sonrası suçluluksuz atıştırmalık &amp; mocktail reçeteleri</li>
+              <li>✦ Kortizol düşürücü akşam menüleri ve magnezyum/melatonin beslenmesi</li>
+              <li>✦ 7/24 WhatsApp üzerinden anlık kriz yönetimi</li>
+            </ul>
+            <button class="btn-holo btn-full pick-aura-pkg" data-pkg="Circadian & Night-Owl Reset (6 Hafta)">
+              Biyoritmimi Başlat 🔮
+            </button>
+          </div>
+
+          <div class="aura-pkg glass-card">
+            <span class="mono-sub">8 HAFTALIK METABOLİK ONARIM</span>
+            <h3>Bio-Glow &amp; Cortisol Detox</h3>
+            <p>Kronik stres, yüksek kortizol kaynaklı bel çevresi yağlanması ve uyku bozuklukları için 2 aylık derinlemesine program.</p>
+            <div class="aura-price">₺5.500 <span>/ 8 Hafta</span></div>
+            <ul>
+              <li>✦ 8 haftalık anti-stres ve bağırsak-beyin (Gut-Brain) protokolü</li>
+              <li>✦ Kan tahlili ve sirkadiyen hormon eğrisi analizi</li>
+              <li>✦ Kalıcı alışkanlık ve sezgisel ritim mezuniyet kılavuzu</li>
+            </ul>
+            <button class="btn-glass btn-full pick-aura-pkg" data-pkg="Bio-Glow & Cortisol Detox (8 Hafta)">
+              Programı Seç →
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- BOOKING FORM -->
+    <section class="aura-booking-section" id="aura-booking">
+      <div class="container">
+        <div class="booking-glass-box glass-card">
+          <div class="booking-copy">
+            <span class="mono-label">🌙 ÜCRETSİZ 15 DK BİYORİTİM ANALİZİ</span>
+            <h2 class="section-title">Kendi Biyolojik Saatinle <em>Barışma Zamanı</em></h2>
+            <p>
+              Sabah 07:00’de uyanmak zorunda değilsin; senin uyku saatine, çalışma tempona ve beyin kimyana uygun bir beslenme sistemi kurmak için formu doldur.
+            </p>
+            <div class="aura-socials">
+              <span>📸 Instagram: @auralab.dyt</span>
+              <span>📌 Pinterest: @dytyarencircadian</span>
+            </div>
+          </div>
+
+          <form class="aura-form" id="auraForm">
+            <div class="af-group">
+              <label for="aName">ADIN SOYADIN</label>
+              <input type="text" id="aName" required placeholder="Örn: Eylül Karaca" />
+            </div>
+            <div class="af-row">
+              <div class="af-group">
+                <label for="aPhone">WHATSAPP NUMARAN</label>
+                <input type="tel" id="aPhone" required placeholder="05XX XXX XX XX" />
+              </div>
+              <div class="af-group">
+                <label for="aProg">İLGİLENDİĞİN PROGRAM</label>
+                <select id="aProg">
+                  <option value="Circadian & Night-Owl Reset (6 Hafta)">Circadian &amp; Night-Owl Reset 🌙</option>
+                  <option value="Dopamine & Focus Protocol (4 Hafta)">Dopamine &amp; Focus Protocol 🧠</option>
+                  <option value="Bio-Glow & Cortisol Detox (8 Hafta)">Bio-Glow &amp; Cortisol Detox 🔮</option>
+                  <option value="Ücretsiz 15 Dk Biyoritim Analizi">Ücretsiz 15 Dk Biyoritim Analizi</option>
+                </select>
+              </div>
+            </div>
+            <div class="af-group">
+              <label for="aNote">UYKU SAATİN &amp; EN BÜYÜK ZORLUĞUN</label>
+              <textarea id="aNote" rows="3" placeholder="Örn: Genelde gece 02:00 gibi uyuyorum, akşam 22:00'den sonra aşırı tatlı/cips isteğim oluyor ve gündüz odaklanamıyorum..."></textarea>
+            </div>
+            <button type="submit" class="btn-holo btn-full btn-lg">
+              Analiz Talebimi Gönder ✨
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="aura-footer">
+    <div class="container footer-inner">
+      <div>
+        <strong>🔮 AURA &amp; CIRCADIAN LAB</strong>
+        <p>© 2026 Dyt. Yaren Studio • Biyolojik Saat, Dopamin &amp; Zihin-Beden Beslenmesi</p>
+      </div>
+      <a href="../index.html" class="btn-glass">← Tüm 5 Tasarıma Dön</a>
+    </div>
+  </footer>
+
+  <!-- MODAL -->
+  <div class="aura-modal-backdrop" id="auraModal" aria-hidden="true">
+    <div class="aura-modal-card glass-card">
+      <button class="aura-close" id="closeAuraModal">✕</button>
+      <div id="auraModalBody"></div>
+    </div>
+  </div>
+
+  <!-- SAVED DRAWER -->
+  <div class="aura-drawer-backdrop" id="auraDrawerBackdrop" aria-hidden="true">
+    <aside class="aura-drawer glass-card">
+      <div class="aura-drawer-head">
+        <div>
+          <span class="mono-label">🔮 KİŞİSEL KOLEKSİYON</span>
+          <h3>Kayıtlı Dopamin &amp; Bento Panom</h3>
+        </div>
+        <button class="aura-close" id="closeAuraDrawer">✕</button>
+      </div>
+      <div class="aura-drawer-body" id="auraDrawerList"></div>
+    </aside>
+  </div>
+
+  <!-- FLOATING SITE SWITCHER DOCK -->
+  <div class="floating-switcher" aria-label="Siteler arası hızlı geçiş">
+    <a href="../index.html" class="sw-item" title="Ana Vitrin">✨ Vitrin</a>
+    <a href="../site-1/index.html" class="sw-item" title="1. Site: Matcha & Soft Cream">🍵 1. Site</a>
+    <a href="../site-2/index.html" class="sw-item" title="2. Site: Blush & Berry">🍒 2. Site</a>
+    <a href="../site-3/index.html" class="sw-item" title="3. Site: Casa Solis Akdeniz">🍋 3. Site</a>
+    <a href="../site-4/index.html" class="sw-item" title="4. Site: Kinetic Fuel">⚡ 4. Site</a>
+    <a href="../site-5/index.html" class="sw-item active" title="5. Site: Aura & Circadian Lab">🔮 5. Site</a>
+  </div>
+
+  <div class="aura-toast-wrap" id="auraToastWrap"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
