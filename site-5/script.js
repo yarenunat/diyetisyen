@@ -33,21 +33,21 @@ function updateCaffeineSimulator() {
   valEl.textContent = `${remainingMg} mg`;
 
   if (remainingMg >= 65) {
-    valEl.style.color = '#FB7185';
+    valEl.style.color = '#C96A7E';
     badgeEl.textContent = '🚨 Derin Uykuyu %40 Böler & Gece Tatlı Krizi Yapar';
-    badgeEl.style.color = '#FB7185';
+    badgeEl.style.color = '#C96A7E';
     antidoteEl.innerHTML =
       'Beynindeki adenozin reseptörleri hâlâ dolu! Akşam 21:30’da <strong>Vişne Suyu + Magnezyum Bisglisinat (Sleepy Girl Mocktail)</strong> iç ve C vitamini (kivi veya narenciye) ile kafein klirensini hızlandır.';
   } else if (remainingMg >= 35) {
-    valEl.style.color = '#FDE68A';
+    valEl.style.color = '#B8863B';
     badgeEl.textContent = '⚠️ Hafif REM Gecikmesi (Orta Seviye)';
-    badgeEl.style.color = '#FDE68A';
+    badgeEl.style.color = '#B8863B';
     antidoteEl.innerHTML =
       'Uykuya dalabilirsin ama sabah yorgun uyanmamak için akşam yemeğinde <strong>triptofan zengini (hindi, yumurta, kabak çekirdeği veya yulaf)</strong> bir öğünle melatonin üretimini destekle.';
   } else {
-    valEl.style.color = '#5EEAD4';
+    valEl.style.color = '#4A8F82';
     badgeEl.textContent = '✅ Güvenli Bölge! Melatonin Salgısı Açık';
-    badgeEl.style.color = '#5EEAD4';
+    badgeEl.style.color = '#4A8F82';
     antidoteEl.innerHTML =
       'Harika zamanlama! Gece 23:30’da kafein seviyen uykunu bölmeyecek düzeyde. Papatya veya melisa çayıyla hücresel onarım (otofaji) moduna geçebilirsin.';
   }
@@ -710,8 +710,8 @@ function openAuraModal(item) {
     <h2 style="font-family: var(--font-serif); font-size: 2.2rem; font-weight: 400; margin-bottom: 0.5rem;">${item.title}</h2>
     <p style="color: var(--text-soft); margin-bottom: 1rem;">${item.desc}</p>
     <img src="${item.img}" alt="${item.title}" style="width: 100%; height: 250px; object-fit: cover; border-radius: 18px; margin-bottom: 1.2rem;" />
-    <div style="background: rgba(94, 234, 212, 0.1); border-left: 3px solid var(--mint); padding: 1.2rem; border-radius: 12px;">
-      <strong style="display: block; color: var(--mint); margin-bottom: 0.35rem;">🔮 Hazırlanışı & Biyoritim Etkisi</strong>
+    <div style="background: var(--violet-tint); border-left: 3px solid var(--violet); padding: 1.2rem; border-radius: 12px;">
+      <strong style="display: block; color: var(--violet); margin-bottom: 0.35rem;">🔮 Hazırlanışı & Biyoritim Etkisi</strong>
       <p style="font-size: 0.92rem; color: var(--text-bright);">${item.recipe}</p>
     </div>
   `;
@@ -726,10 +726,10 @@ function renderAuraDrawer() {
   auraDrawerList.innerHTML = savedAuraList
     .map(
       (x) => `
-      <div style="background: rgba(255,255,255,0.06); border: 1px solid var(--glass-border); padding: 0.85rem 1rem; border-radius: 16px; display: flex; justify-content: space-between; align-items: center; gap: 0.75rem;">
+      <div style="background: #FFFFFF; border: 1px solid var(--glass-border); padding: 0.85rem 1rem; border-radius: 16px; display: flex; justify-content: space-between; align-items: center; gap: 0.75rem;">
         <div>
           <strong style="display: block; font-size: 0.9rem;">${x.title}</strong>
-          <span class="mono-sub" style="color: var(--mint);">${x.meta}</span>
+          <span class="mono-sub" style="color: var(--violet);">${x.meta}</span>
         </div>
         <button class="aura-close" data-rem="${x.id}">✕</button>
       </div>

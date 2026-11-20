@@ -1,23 +1,37 @@
 /* ==========================================================================
-   SITE 5: AURA & CIRCADIAN LAB — VISION-OS HOLOGRAPHIC BLURMORPHISM
+   SITE 5: AURA & CIRCADIAN LAB — SOFT CLOUD LAVENDER & PASTEL MIST BLURMORPHISM
    ========================================================================== */
 
 :root {
-  --bg-midnight: #0C0E17;
-  --bg-twilight: #141827;
-  --glass-surface: rgba(24, 29, 46, 0.58);
-  --glass-strong: rgba(30, 36, 58, 0.76);
-  --glass-border: rgba(255, 255, 255, 0.14);
-  --glass-highlight: rgba(255, 255, 255, 0.28);
+  /* Soft, Low-Contrast Dreamy Lavender & Cloud Mist Palette */
+  --bg-cloud: #F5F2FA;
+  --bg-lilac-mist: #ECE7F5;
+  --glass-surface: rgba(255, 255, 255, 0.66);
+  --glass-strong: rgba(255, 255, 255, 0.84);
+  --glass-subtle: rgba(244, 240, 252, 0.72);
+  --glass-border: rgba(138, 118, 182, 0.16);
+  --glass-highlight: rgba(255, 255, 255, 0.92);
 
-  --mint: #5EEAD4;
-  --violet: #C084FC;
-  --coral: #FB7185;
-  --gold: #FDE68A;
+  /* Softened Pastel Accents (Easy on the eyes) */
+  --mint: #4A8F82;
+  --mint-soft: #88C7BB;
+  --mint-tint: #E6F4F1;
 
-  --text-bright: #F8FAFC;
-  --text-soft: #CBD5E1;
-  --text-muted: #94A3B8;
+  --violet: #785EB0;
+  --violet-soft: #B49EE0;
+  --violet-tint: #EFEAF9;
+
+  --coral: #C96A7E;
+  --coral-soft: #E89DAE;
+  --coral-tint: #FCEEEF;
+
+  --gold: #B8863B;
+  --gold-tint: #FBF3E4;
+
+  /* Soft Plum-Slate Typography (No harsh black or glaring white) */
+  --text-bright: #2F293D;
+  --text-soft: #5B536E;
+  --text-muted: #877E9B;
 
   --font-display: 'Syne', sans-serif;
   --font-serif: 'Instrument Serif', Georgia, serif;
@@ -29,8 +43,8 @@
   --radius-lg: 32px;
   --radius-pill: 999px;
 
-  --shadow-glass: inset 0 1px 1px rgba(255, 255, 255, 0.22), 0 20px 50px rgba(4, 6, 12, 0.55);
-  --shadow-holo: 0 0 35px rgba(94, 234, 212, 0.2), 0 0 60px rgba(192, 132, 252, 0.15);
+  --shadow-glass: inset 0 1px 1px rgba(255, 255, 255, 0.95), 0 14px 38px rgba(82, 68, 115, 0.07);
+  --shadow-holo: 0 14px 36px rgba(120, 94, 176, 0.14);
 }
 
 *,
@@ -47,12 +61,12 @@ html {
 
 body {
   font-family: var(--font-sans);
-  background-color: var(--bg-midnight);
+  background-color: var(--bg-cloud);
   background-image:
-    radial-gradient(at 15% 15%, rgba(94, 234, 212, 0.16) 0px, transparent 48%),
-    radial-gradient(at 85% 20%, rgba(192, 132, 252, 0.18) 0px, transparent 52%),
-    radial-gradient(at 50% 65%, rgba(251, 113, 133, 0.12) 0px, transparent 55%),
-    radial-gradient(at 20% 88%, rgba(94, 234, 212, 0.12) 0px, transparent 50%);
+    radial-gradient(at 15% 15%, rgba(180, 158, 224, 0.34) 0px, transparent 50%),
+    radial-gradient(at 85% 20%, rgba(154, 212, 200, 0.34) 0px, transparent 52%),
+    radial-gradient(at 50% 65%, rgba(242, 194, 204, 0.3) 0px, transparent 55%),
+    radial-gradient(at 20% 88%, rgba(247, 224, 186, 0.32) 0px, transparent 50%);
   background-attachment: fixed;
   color: var(--text-bright);
   line-height: 1.6;
@@ -60,7 +74,7 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Holographic Aurora Floating Orbs */
+/* Soft Pastel Floating Orbs */
 .aura-canvas {
   position: fixed;
   inset: 0;
@@ -73,14 +87,14 @@ body {
   position: absolute;
   border-radius: 50%;
   filter: blur(95px);
-  opacity: 0.48;
-  animation: driftAura 18s ease-in-out infinite alternate;
+  opacity: 0.55;
+  animation: driftAura 20s ease-in-out infinite alternate;
 }
 
 .orb-mint {
   width: 460px;
   height: 460px;
-  background: radial-gradient(circle, rgba(94, 234, 212, 0.55), transparent 70%);
+  background: radial-gradient(circle, rgba(146, 212, 199, 0.65), transparent 70%);
   top: -90px;
   left: -80px;
 }
@@ -88,7 +102,7 @@ body {
 .orb-violet {
   width: 520px;
   height: 520px;
-  background: radial-gradient(circle, rgba(192, 132, 252, 0.55), transparent 70%);
+  background: radial-gradient(circle, rgba(190, 170, 232, 0.65), transparent 70%);
   top: 28%;
   right: -120px;
   animation-delay: -5s;
@@ -97,7 +111,7 @@ body {
 .orb-coral {
   width: 440px;
   height: 440px;
-  background: radial-gradient(circle, rgba(251, 113, 133, 0.45), transparent 70%);
+  background: radial-gradient(circle, rgba(244, 192, 203, 0.6), transparent 70%);
   bottom: 8%;
   left: 10%;
   animation-delay: -10s;
@@ -106,7 +120,7 @@ body {
 .orb-gold {
   width: 360px;
   height: 360px;
-  background: radial-gradient(circle, rgba(253, 230, 138, 0.35), transparent 70%);
+  background: radial-gradient(circle, rgba(248, 226, 184, 0.55), transparent 70%);
   top: 62%;
   left: 45%;
   animation-delay: -14s;
@@ -114,8 +128,8 @@ body {
 
 @keyframes driftAura {
   0% { transform: translate(0, 0) scale(1); }
-  50% { transform: translate(40px, -35px) scale(1.1); }
-  100% { transform: translate(-30px, 30px) scale(0.94); }
+  50% { transform: translate(35px, -30px) scale(1.08); }
+  100% { transform: translate(-25px, 25px) scale(0.95); }
 }
 
 .aura-cursor {
@@ -123,8 +137,8 @@ body {
   width: 360px;
   height: 360px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(94, 234, 212, 0.14) 0%, rgba(192, 132, 252, 0.1) 45%, transparent 70%);
-  filter: blur(40px);
+  background: radial-gradient(circle, rgba(180, 158, 224, 0.18) 0%, rgba(136, 199, 187, 0.14) 45%, transparent 70%);
+  filter: blur(45px);
   pointer-events: none;
   z-index: 1;
   transform: translate(-50%, -50%);
@@ -159,12 +173,12 @@ textarea {
   margin-inline: auto;
 }
 
-/* VisionOS Liquid Glass Card */
+/* Milky Frosted Cloud Glass Card */
 .glass-card {
   background: var(--glass-surface);
-  backdrop-filter: blur(26px) saturate(190%);
-  -webkit-backdrop-filter: blur(26px) saturate(190%);
-  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(26px) saturate(165%);
+  -webkit-backdrop-filter: blur(26px) saturate(165%);
+  border: 1px solid rgba(255, 255, 255, 0.85);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-glass);
 }
@@ -181,14 +195,19 @@ textarea {
 
 .mono-label {
   display: inline-block;
-  color: var(--mint);
-  margin-bottom: 0.55rem;
+  color: var(--violet);
+  background: var(--violet-tint);
+  padding: 0.28rem 0.78rem;
+  border-radius: var(--radius-pill);
+  margin-bottom: 0.65rem;
 }
 
-/* Top Bio-Ticker */
+/* Top Bio-Ticker (Soft Lavender Mist instead of harsh black) */
 .bio-topbar {
-  background: rgba(8, 10, 18, 0.85);
+  background: rgba(235, 229, 247, 0.85);
+  backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--glass-border);
+  color: var(--text-soft);
   padding: 0.5rem 0;
   font-size: 0.76rem;
 }
@@ -202,12 +221,14 @@ textarea {
 }
 
 .top-cta {
-  color: var(--mint);
+  color: var(--violet);
   font-family: var(--font-mono);
   font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
-/* Floating VisionOS Navbar */
+/* Floating Frosted Navbar */
 .aura-header {
   position: sticky;
   top: 12px;
@@ -216,9 +237,9 @@ textarea {
 }
 
 .aura-nav {
-  background: rgba(18, 22, 36, 0.72);
-  backdrop-filter: blur(24px) saturate(190%);
-  -webkit-backdrop-filter: blur(24px) saturate(190%);
+  background: rgba(255, 255, 255, 0.74);
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
   border: 1px solid var(--glass-highlight);
   border-radius: var(--radius-pill);
   padding: 0.65rem 1.35rem;
@@ -239,8 +260,8 @@ textarea {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background: linear-gradient(135deg, rgba(94, 234, 212, 0.25), rgba(192, 132, 252, 0.35));
-  border: 1px solid var(--glass-highlight);
+  background: linear-gradient(135deg, var(--violet-tint), var(--mint-tint));
+  border: 1px solid var(--glass-border);
   display: grid;
   place-items: center;
   font-size: 1.15rem;
@@ -255,10 +276,8 @@ textarea {
 .logo-copy strong {
   font-family: var(--font-display);
   font-size: 1.18rem;
-  letter-spacing: 0.03em;
-  background: linear-gradient(90deg, #FFFFFF, var(--mint));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  letter-spacing: 0.02em;
+  color: var(--text-bright);
 }
 
 .logo-copy span {
@@ -276,7 +295,7 @@ textarea {
 }
 
 .aura-links a:hover {
-  color: var(--mint);
+  color: var(--violet);
 }
 
 .aura-actions {
@@ -289,8 +308,8 @@ textarea {
   display: inline-flex;
   align-items: center;
   gap: 0.45rem;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid var(--glass-highlight);
+  background: var(--violet-tint);
+  border: 1px solid var(--glass-border);
   color: var(--text-bright);
   padding: 0.5rem 0.95rem;
   border-radius: var(--radius-pill);
@@ -300,8 +319,8 @@ textarea {
 }
 
 .saved-badge {
-  background: linear-gradient(135deg, var(--mint), var(--violet));
-  color: #0C0E17;
+  background: var(--violet);
+  color: #FFFFFF;
   font-family: var(--font-mono);
   font-size: 0.72rem;
   font-weight: 700;
@@ -309,27 +328,27 @@ textarea {
   border-radius: var(--radius-pill);
 }
 
-/* Holographic & Glass Buttons */
+/* Softened Pastel Gradient & Glass Buttons */
 .btn-holo {
   display: inline-flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  background: linear-gradient(135deg, var(--mint) 0%, #818CF8 50%, var(--violet) 100%);
-  color: #0B0D14;
-  font-weight: 700;
+  background: linear-gradient(135deg, #6E56A8 0%, #568F84 100%);
+  color: #FFFFFF;
+  font-weight: 600;
   font-size: 0.9rem;
   padding: 0.65rem 1.35rem;
   border-radius: var(--radius-pill);
   border: none;
   cursor: pointer;
-  box-shadow: 0 8px 25px rgba(94, 234, 212, 0.25);
+  box-shadow: 0 8px 22px rgba(110, 86, 168, 0.22);
   transition: transform 0.22s ease, box-shadow 0.22s ease;
 }
 
 .btn-holo:hover {
   transform: translateY(-2px);
-  box-shadow: 0 14px 32px rgba(192, 132, 252, 0.38);
+  box-shadow: 0 12px 28px rgba(110, 86, 168, 0.3);
 }
 
 .btn-glass {
@@ -337,9 +356,9 @@ textarea {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  background: rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.75);
   backdrop-filter: blur(16px);
-  border: 1px solid var(--glass-highlight);
+  border: 1px solid var(--glass-border);
   color: var(--text-bright);
   font-weight: 600;
   font-size: 0.9rem;
@@ -350,8 +369,8 @@ textarea {
 }
 
 .btn-glass:hover {
-  background: rgba(255, 255, 255, 0.15);
-  border-color: var(--mint);
+  background: #FFFFFF;
+  border-color: var(--violet);
 }
 
 .btn-lg {
@@ -376,13 +395,12 @@ textarea {
   font-weight: 400;
   line-height: 1.06;
   margin-bottom: 0.65rem;
+  color: var(--text-bright);
 }
 
 .section-title em {
   font-style: italic;
-  background: linear-gradient(90deg, var(--mint), var(--violet), var(--coral));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--violet);
 }
 
 .section-sub {
@@ -408,8 +426,8 @@ textarea {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: rgba(94, 234, 212, 0.12);
-  border: 1px solid rgba(94, 234, 212, 0.4);
+  background: var(--mint-tint);
+  border: 1px solid rgba(74, 143, 130, 0.28);
   color: var(--mint);
   font-family: var(--font-mono);
   font-size: 0.72rem;
@@ -424,7 +442,6 @@ textarea {
   height: 8px;
   border-radius: 50%;
   background: var(--mint);
-  box-shadow: 0 0 10px var(--mint);
 }
 
 .aura-title {
@@ -433,13 +450,12 @@ textarea {
   font-weight: 400;
   line-height: 1.04;
   margin-bottom: 1.2rem;
+  color: var(--text-bright);
 }
 
 .aura-title em {
   font-style: italic;
-  background: linear-gradient(90deg, var(--mint), var(--violet));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--violet);
 }
 
 .aura-lead {
@@ -467,7 +483,7 @@ textarea {
   display: block;
   font-family: var(--font-display);
   font-size: 1.65rem;
-  color: var(--mint);
+  color: var(--violet);
 }
 
 .q-stat span {
@@ -494,8 +510,8 @@ textarea {
 }
 
 .live-chip {
-  background: rgba(192, 132, 252, 0.2);
-  border: 1px solid var(--violet);
+  background: var(--violet-tint);
+  border: 1px solid rgba(120, 94, 176, 0.3);
   color: var(--violet);
   font-family: var(--font-mono);
   font-size: 0.68rem;
@@ -528,7 +544,7 @@ textarea {
 }
 
 .c-pill {
-  background: rgba(255, 255, 255, 0.06);
+  background: rgba(255, 255, 255, 0.7);
   border: 1px solid var(--glass-border);
   color: var(--text-soft);
   padding: 0.55rem 0.75rem;
@@ -540,15 +556,20 @@ textarea {
   transition: all 0.2s ease;
 }
 
+.c-pill:hover {
+  background: #FFFFFF;
+}
+
 .c-pill.active {
-  background: rgba(94, 234, 212, 0.16);
-  border-color: var(--mint);
-  color: #FFFFFF;
+  background: var(--violet-tint);
+  border-color: var(--violet);
+  color: var(--text-bright);
+  box-shadow: 0 4px 12px rgba(120, 94, 176, 0.12);
 }
 
 .aura-slider {
   width: 100%;
-  accent-color: var(--mint);
+  accent-color: var(--violet);
   cursor: pointer;
 }
 
@@ -562,8 +583,8 @@ textarea {
 }
 
 .caff-result-box {
-  background: rgba(10, 12, 20, 0.65);
-  border: 1px solid var(--glass-highlight);
+  background: rgba(244, 240, 252, 0.85);
+  border: 1px solid var(--glass-border);
   border-radius: 20px;
   padding: 1.15rem;
   display: grid;
@@ -625,7 +646,7 @@ textarea {
 }
 
 .time-node {
-  background: rgba(255, 255, 255, 0.06);
+  background: rgba(255, 255, 255, 0.72);
   border: 1px solid var(--glass-border);
   color: var(--text-soft);
   padding: 0.5rem 0.9rem;
@@ -637,10 +658,10 @@ textarea {
 }
 
 .time-node.active {
-  background: linear-gradient(135deg, rgba(94, 234, 212, 0.22), rgba(192, 132, 252, 0.25));
-  border-color: var(--mint);
+  background: var(--violet);
+  border-color: var(--violet);
   color: #FFFFFF;
-  box-shadow: 0 0 20px rgba(94, 234, 212, 0.22);
+  box-shadow: 0 6px 16px rgba(120, 94, 176, 0.22);
 }
 
 .svg-wheel-wrap {
@@ -658,7 +679,7 @@ textarea {
   width: 240px;
   height: 240px;
   border-radius: 50%;
-  background: radial-gradient(circle, rgba(94, 234, 212, 0.35), rgba(192, 132, 252, 0.2), transparent 70%);
+  background: radial-gradient(circle, rgba(180, 158, 224, 0.4), rgba(136, 199, 187, 0.25), transparent 70%);
   filter: blur(25px);
   transition: background 0.5s ease;
 }
@@ -680,8 +701,8 @@ textarea {
 
 .cd-hormone-pill {
   align-self: flex-start;
-  background: rgba(192, 132, 252, 0.18);
-  border: 1px solid var(--violet);
+  background: var(--violet-tint);
+  border: 1px solid rgba(120, 94, 176, 0.28);
   color: var(--violet);
   font-family: var(--font-mono);
   font-size: 0.74rem;
@@ -698,8 +719,8 @@ textarea {
 }
 
 .cd-plate-card {
-  background: rgba(12, 14, 23, 0.65);
-  border: 1px solid var(--glass-highlight);
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid var(--glass-border);
   border-radius: 20px;
   padding: 1.25rem;
   display: grid;
@@ -725,7 +746,7 @@ textarea {
    ========================================================================== */
 .bento-designer-section {
   padding: 5rem 0;
-  background: rgba(16, 20, 34, 0.45);
+  background: rgba(236, 231, 245, 0.55);
   border-top: 1px solid var(--glass-border);
   border-bottom: 1px solid var(--glass-border);
 }
@@ -755,8 +776,8 @@ textarea {
 }
 
 .b-step-num {
-  background: rgba(94, 234, 212, 0.16);
-  border: 1px solid var(--mint);
+  background: var(--mint-tint);
+  border: 1px solid rgba(74, 143, 130, 0.3);
   color: var(--mint);
   font-family: var(--font-mono);
   font-size: 0.7rem;
@@ -781,7 +802,7 @@ textarea {
   display: flex;
   align-items: center;
   gap: 0.75rem;
-  background: rgba(255, 255, 255, 0.05);
+  background: rgba(255, 255, 255, 0.75);
   border: 1.5px solid var(--glass-border);
   border-radius: 16px;
   padding: 0.65rem 0.8rem;
@@ -792,27 +813,28 @@ textarea {
 }
 
 .bento-opt-btn:hover {
-  background: rgba(255, 255, 255, 0.1);
-  border-color: var(--violet);
+  background: #FFFFFF;
+  border-color: var(--violet-soft);
   transform: translateY(-2px);
 }
 
 .bento-opt-btn.active {
-  background: linear-gradient(135deg, rgba(94, 234, 212, 0.18), rgba(192, 132, 252, 0.22));
-  border-color: var(--mint);
-  box-shadow: 0 8px 22px rgba(94, 234, 212, 0.16);
+  background: linear-gradient(135deg, var(--violet-tint), var(--mint-tint));
+  border-color: var(--violet);
+  box-shadow: 0 8px 20px rgba(120, 94, 176, 0.14);
 }
 
 .b-thumb-icon {
   width: 48px;
   height: 48px;
   border-radius: 13px;
-  background: rgba(12, 14, 23, 0.75);
-  border: 1px solid var(--glass-highlight);
+  background: #FFFFFF;
+  border: 1px solid var(--glass-border);
   display: grid;
   place-items: center;
   flex-shrink: 0;
   transition: transform 0.3s ease;
+  box-shadow: 0 4px 10px rgba(120, 94, 176, 0.08);
 }
 
 .b-thumb-icon svg {
@@ -833,20 +855,22 @@ textarea {
 
 .b-opt-copy strong {
   font-size: 0.86rem;
+  color: var(--text-bright);
 }
 
 .b-opt-copy span {
   font-family: var(--font-mono);
   font-size: 0.69rem;
-  color: var(--mint);
+  color: var(--violet);
   margin-top: 3px;
 }
 
-/* Right: 3D Animated Glass Bento Box Preview */
+/* Right: Soft Frosted Glass Bento Box Preview */
 .bento-preview-card {
   padding: 1.85rem;
   position: sticky;
   top: 90px;
+  background: rgba(255, 255, 255, 0.78);
 }
 
 .bento-preview-top {
@@ -857,9 +881,9 @@ textarea {
 }
 
 .shake-bento-btn {
-  background: rgba(192, 132, 252, 0.18);
-  border: 1px solid var(--violet);
-  color: #FFFFFF;
+  background: var(--violet-tint);
+  border: 1px solid rgba(120, 94, 176, 0.3);
+  color: var(--violet);
   font-family: var(--font-mono);
   font-size: 0.72rem;
   font-weight: 700;
@@ -871,7 +895,7 @@ textarea {
 
 .shake-bento-btn:hover {
   background: var(--violet);
-  color: #0C0E17;
+  color: #FFFFFF;
 }
 
 .bento-tray-stage {
@@ -889,8 +913,8 @@ textarea {
 .bento-ambient-glow {
   position: absolute;
   inset: 10px;
-  background: radial-gradient(circle, rgba(94, 234, 212, 0.35), rgba(192, 132, 252, 0.3), transparent 72%);
-  filter: blur(26px);
+  background: radial-gradient(circle, rgba(180, 158, 224, 0.45), rgba(136, 199, 187, 0.35), transparent 72%);
+  filter: blur(24px);
   z-index: 0;
 }
 
@@ -899,9 +923,9 @@ textarea {
   z-index: 2;
   width: 100%;
   height: 100%;
-  background: rgba(12, 15, 25, 0.82);
+  background: rgba(246, 243, 252, 0.88);
   backdrop-filter: blur(18px);
-  border: 2px solid rgba(255, 255, 255, 0.32);
+  border: 2.5px solid #FFFFFF;
   border-radius: 26px;
   padding: 10px;
   display: grid;
@@ -909,8 +933,8 @@ textarea {
   grid-template-rows: 1fr 1fr;
   gap: 8px;
   box-shadow:
-    inset 0 2px 10px rgba(255, 255, 255, 0.22),
-    0 24px 48px rgba(0, 0, 0, 0.65);
+    inset 0 2px 8px rgba(120, 94, 176, 0.1),
+    0 18px 40px rgba(82, 68, 115, 0.16);
   transition: transform 0.2s ease-out;
 }
 
@@ -920,16 +944,16 @@ textarea {
 
 @keyframes bentoShakeAnim {
   0% { transform: rotate(0deg) scale(1); }
-  25% { transform: rotate(-6deg) scale(1.04); }
-  50% { transform: rotate(6deg) scale(1.05); }
-  75% { transform: rotate(-3deg) scale(1.02); }
+  25% { transform: rotate(-5deg) scale(1.03); }
+  50% { transform: rotate(5deg) scale(1.04); }
+  75% { transform: rotate(-2deg) scale(1.01); }
   100% { transform: rotate(0deg) scale(1); }
 }
 
 .bento-cell {
   position: relative;
-  background: rgba(24, 30, 48, 0.85);
-  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: #FFFFFF;
+  border: 1px solid rgba(138, 118, 182, 0.22);
   border-radius: 18px;
   overflow: hidden;
   display: flex;
@@ -937,21 +961,25 @@ textarea {
   align-items: center;
   justify-content: center;
   padding: 0.5rem;
+  box-shadow: inset 0 2px 6px rgba(120, 94, 176, 0.06);
 }
 
 .cell-main {
   grid-row: 1 / 3;
   grid-column: 1 / 2;
+  background: linear-gradient(160deg, #FFFFFF, #F5F0FC);
 }
 
 .cell-crunch {
   grid-row: 1 / 2;
   grid-column: 2 / 3;
+  background: linear-gradient(160deg, #FFFFFF, #FDF2F4);
 }
 
 .cell-elixir {
   grid-row: 2 / 3;
   grid-column: 2 / 3;
+  background: linear-gradient(160deg, #FFFFFF, #EBF7F5);
 }
 
 .cell-svg-art {
@@ -964,13 +992,13 @@ textarea {
 .cell-svg-art svg {
   width: 100%;
   height: 100%;
-  max-height: 115px;
-  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.45));
+  max-height: 112px;
+  filter: drop-shadow(0 6px 12px rgba(82, 68, 115, 0.16));
 }
 
 .cell-crunch .cell-svg-art svg,
 .cell-elixir .cell-svg-art svg {
-  max-height: 64px;
+  max-height: 62px;
 }
 
 .bento-cell.cell-pop .cell-svg-art {
@@ -978,13 +1006,13 @@ textarea {
 }
 
 .bento-cell.cell-pop {
-  border-color: var(--mint);
-  box-shadow: inset 0 0 20px rgba(94, 234, 212, 0.35);
+  border-color: var(--violet);
+  box-shadow: inset 0 0 18px rgba(180, 158, 224, 0.35);
 }
 
 @keyframes cellBounceIn {
-  0% { opacity: 0.2; transform: scale(1.38) rotate(-10deg); }
-  70% { transform: scale(0.94) rotate(3deg); }
+  0% { opacity: 0.2; transform: scale(1.32) rotate(-8deg); }
+  70% { transform: scale(0.95) rotate(2deg); }
   100% { opacity: 1; transform: scale(1) rotate(0deg); }
 }
 
@@ -993,19 +1021,20 @@ textarea {
   bottom: 6px;
   left: 6px;
   right: 6px;
-  background: rgba(10, 12, 20, 0.86);
+  background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(138, 118, 182, 0.22);
   padding: 0.2rem 0.5rem;
   border-radius: 99px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   font-size: 0.65rem;
+  box-shadow: 0 3px 8px rgba(82, 68, 115, 0.08);
 }
 
 .cell-label-pill span {
-  font-weight: 600;
+  font-weight: 700;
   color: var(--text-bright);
   white-space: nowrap;
   overflow: hidden;
@@ -1014,7 +1043,7 @@ textarea {
 
 .cell-label-pill strong {
   font-family: var(--font-mono);
-  color: var(--mint);
+  color: var(--violet);
   font-size: 0.62rem;
   margin-left: 4px;
   flex-shrink: 0;
@@ -1026,6 +1055,7 @@ textarea {
   font-weight: 400;
   text-align: center;
   margin-bottom: 1rem;
+  color: var(--text-bright);
 }
 
 .bento-neuro-meters {
@@ -1036,7 +1066,7 @@ textarea {
 }
 
 .neuro-box {
-  background: rgba(255, 255, 255, 0.05);
+  background: var(--glass-subtle);
   border: 1px solid var(--glass-border);
   padding: 0.7rem 0.85rem;
   border-radius: 14px;
@@ -1047,11 +1077,12 @@ textarea {
   justify-content: space-between;
   font-size: 0.76rem;
   margin-bottom: 0.35rem;
+  color: var(--text-soft);
 }
 
 .neuro-track {
   height: 6px;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(138, 118, 182, 0.15);
   border-radius: 99px;
   overflow: hidden;
 }
@@ -1073,7 +1104,7 @@ textarea {
 }
 
 .bm-pill {
-  background: rgba(12, 14, 23, 0.65);
+  background: var(--glass-subtle);
   border: 1px solid var(--glass-border);
   padding: 0.6rem;
   border-radius: 12px;
@@ -1089,11 +1120,11 @@ textarea {
 .bm-pill strong {
   font-family: var(--font-mono);
   font-size: 0.92rem;
-  color: var(--mint);
+  color: var(--violet);
 }
 
 .bento-coach-note {
-  background: rgba(192, 132, 252, 0.12);
+  background: var(--violet-tint);
   border-left: 3px solid var(--violet);
   padding: 0.8rem 0.95rem;
   border-radius: 12px;
@@ -1124,14 +1155,15 @@ textarea {
 
 .aura-search-box input {
   width: 100%;
-  background: var(--glass-surface);
+  background: rgba(255, 255, 255, 0.82);
   backdrop-filter: blur(16px);
-  border: 1px solid var(--glass-highlight);
-  color: #FFFFFF;
+  border: 1px solid var(--glass-border);
+  color: var(--text-bright);
   padding: 0.75rem 1.2rem;
   border-radius: var(--radius-pill);
   font-size: 0.9rem;
   outline: none;
+  box-shadow: var(--shadow-glass);
 }
 
 .aura-filter-row {
@@ -1142,7 +1174,7 @@ textarea {
 }
 
 .a-chip {
-  background: rgba(255, 255, 255, 0.06);
+  background: rgba(255, 255, 255, 0.75);
   border: 1px solid var(--glass-border);
   color: var(--text-soft);
   padding: 0.55rem 1.15rem;
@@ -1153,9 +1185,9 @@ textarea {
 }
 
 .a-chip.active {
-  background: linear-gradient(135deg, var(--mint), var(--violet));
-  color: #0C0E17;
-  border-color: transparent;
+  background: var(--violet);
+  color: #FFFFFF;
+  border-color: var(--violet);
   font-weight: 700;
 }
 
@@ -1196,12 +1228,13 @@ textarea {
   position: absolute;
   bottom: 12px;
   left: 12px;
-  background: rgba(12, 14, 23, 0.86);
+  background: rgba(255, 255, 255, 0.92);
   backdrop-filter: blur(10px);
-  border: 1px solid var(--glass-highlight);
-  color: var(--mint);
+  border: 1px solid var(--glass-border);
+  color: var(--violet);
   font-family: var(--font-mono);
   font-size: 0.7rem;
+  font-weight: 700;
   padding: 0.25rem 0.65rem;
   border-radius: 99px;
 }
@@ -1210,14 +1243,15 @@ textarea {
   position: absolute;
   top: 12px;
   right: 12px;
-  background: linear-gradient(135deg, var(--mint), var(--violet));
-  color: #0C0E17;
+  background: var(--violet);
+  color: #FFFFFF;
   border: none;
   padding: 0.38rem 0.85rem;
   border-radius: 99px;
   font-size: 0.76rem;
   font-weight: 700;
   cursor: pointer;
+  box-shadow: 0 4px 12px rgba(82, 68, 115, 0.22);
 }
 
 .a-pin-body {
@@ -1229,6 +1263,7 @@ textarea {
   font-size: 1.55rem;
   font-weight: 400;
   margin-bottom: 0.35rem;
+  color: var(--text-bright);
 }
 
 .a-pin-body p {
@@ -1242,7 +1277,7 @@ textarea {
   justify-content: space-between;
   font-family: var(--font-mono);
   font-size: 0.72rem;
-  color: var(--violet);
+  color: var(--mint);
   border-top: 1px solid var(--glass-border);
   padding-top: 0.65rem;
 }
@@ -1269,7 +1304,8 @@ textarea {
 }
 
 .pkg-holo-featured {
-  border: 1.5px solid var(--mint);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.88), rgba(239, 234, 249, 0.85));
+  border: 1.5px solid var(--violet-soft);
   box-shadow: var(--shadow-holo);
   transform: translateY(-6px);
 }
@@ -1278,8 +1314,8 @@ textarea {
   position: absolute;
   top: -13px;
   right: 20px;
-  background: linear-gradient(90deg, var(--mint), var(--violet));
-  color: #0C0E17;
+  background: var(--violet);
+  color: #FFFFFF;
   font-family: var(--font-mono);
   font-size: 0.7rem;
   font-weight: 700;
@@ -1303,7 +1339,7 @@ textarea {
 .aura-price {
   font-family: var(--font-display);
   font-size: 2.3rem;
-  color: var(--mint);
+  color: var(--violet);
   margin-bottom: 1.25rem;
   padding-bottom: 1rem;
   border-bottom: 1px solid var(--glass-border);
@@ -1342,8 +1378,9 @@ textarea {
 }
 
 .aura-socials span {
-  background: rgba(255, 255, 255, 0.07);
-  border: 1px solid var(--glass-highlight);
+  background: var(--violet-tint);
+  border: 1px solid var(--glass-border);
+  color: var(--violet);
   padding: 0.45rem 0.9rem;
   border-radius: 99px;
   font-family: var(--font-mono);
@@ -1365,15 +1402,15 @@ textarea {
 .af-group label {
   font-family: var(--font-mono);
   font-size: 0.72rem;
-  color: var(--mint);
+  color: var(--violet);
 }
 
 .af-group input,
 .af-group select,
 .af-group textarea {
-  background: rgba(12, 14, 23, 0.75);
-  border: 1px solid var(--glass-highlight);
-  color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.88);
+  border: 1px solid var(--glass-border);
+  color: var(--text-bright);
   padding: 0.75rem 0.95rem;
   border-radius: 14px;
   font-size: 0.9rem;
@@ -1409,7 +1446,7 @@ textarea {
 .aura-drawer-backdrop {
   position: fixed;
   inset: 0;
-  background: rgba(6, 8, 14, 0.72);
+  background: rgba(55, 45, 78, 0.42);
   backdrop-filter: blur(8px);
   display: none;
   align-items: center;
@@ -1429,7 +1466,7 @@ textarea {
   position: relative;
   max-height: 90vh;
   overflow-y: auto;
-  background: rgba(20, 24, 39, 0.94);
+  background: rgba(255, 255, 255, 0.95);
 }
 
 .aura-drawer-backdrop {
@@ -1441,7 +1478,7 @@ textarea {
   width: min(420px, 100%);
   height: 100%;
   border-radius: 0;
-  background: rgba(16, 20, 34, 0.96);
+  background: rgba(248, 246, 253, 0.97);
   display: flex;
   flex-direction: column;
 }
@@ -1467,9 +1504,9 @@ textarea {
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  border: 1px solid var(--glass-highlight);
-  background: rgba(255, 255, 255, 0.08);
-  color: #FFFFFF;
+  border: 1px solid var(--glass-border);
+  background: #FFFFFF;
+  color: var(--text-bright);
   cursor: pointer;
 }
 
@@ -1486,9 +1523,9 @@ textarea {
   left: 50%;
   transform: translateX(-50%);
   z-index: 950;
-  background: rgba(12, 14, 23, 0.94);
+  background: rgba(47, 41, 61, 0.92);
   backdrop-filter: blur(14px);
-  border: 1px solid var(--glass-highlight);
+  border: 1px solid rgba(255, 255, 255, 0.2);
   padding: 0.32rem;
   border-radius: 999px;
   display: flex;
@@ -1497,7 +1534,7 @@ textarea {
   max-width: calc(100vw - 20px);
   overflow-x: auto;
   scrollbar-width: none;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.45);
+  box-shadow: 0 10px 30px rgba(47, 41, 61, 0.22);
 }
 
 .floating-switcher::-webkit-scrollbar {
@@ -1505,7 +1542,7 @@ textarea {
 }
 
 .sw-item {
-  color: var(--text-soft);
+  color: #EFEAF9;
   font-size: 0.78rem;
   font-weight: 600;
   padding: 0.42rem 0.85rem;
@@ -1516,12 +1553,12 @@ textarea {
 }
 
 .sw-item:hover {
-  background: rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.14);
 }
 
 .sw-item.active {
-  background: linear-gradient(135deg, var(--mint), var(--violet));
-  color: #0C0E17;
+  background: #EFEAF9;
+  color: var(--violet);
   font-weight: 700;
 }
 
@@ -1539,9 +1576,8 @@ textarea {
 }
 
 .aura-toast {
-  background: rgba(20, 24, 39, 0.96);
-  border: 1px solid var(--mint);
-  color: var(--mint);
+  background: var(--violet);
+  color: #FFFFFF;
   padding: 0.75rem 1.15rem;
   border-radius: 99px;
   font-size: 0.84rem;
@@ -1558,15 +1594,15 @@ textarea {
   width: 38px;
   height: 38px;
   border-radius: 50%;
-  border: 1px solid var(--glass-highlight);
-  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--glass-border);
+  background: #FFFFFF;
   cursor: pointer;
 }
 
 .aura-burger span {
   width: 16px;
   height: 2px;
-  background: #FFFFFF;
+  background: var(--text-bright);
 }
 
 /* ==========================================================================
@@ -1622,14 +1658,15 @@ textarea {
     top: calc(100% + 8px);
     left: 0;
     right: 0;
-    background: rgba(16, 20, 34, 0.98);
+    background: rgba(255, 255, 255, 0.97);
     backdrop-filter: blur(24px);
-    border: 1px solid var(--glass-highlight);
+    border: 1px solid var(--glass-border);
     border-radius: 22px;
     padding: 1.2rem;
     flex-direction: column;
     gap: 0.85rem;
     z-index: 200;
+    box-shadow: var(--shadow-holo);
   }
 
   .aura-links.open {
